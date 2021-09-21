@@ -12,7 +12,6 @@
 
 .tb-item {
   margin-right: 25px;
-  margin-left: 25px;
 }
 .toolbar-top {
   background-color: black;
@@ -29,4 +28,11 @@
 .search {
   width: 16px;
   height: 16px;
+}
+
+.banner {
+  margin: 16px auto;
+  width: 60%;
+  height: 120px;
+  border: 1px solid black;
 }
