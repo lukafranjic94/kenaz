@@ -1,0 +1,27 @@
+:host {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+  margin: 5px 0px;
+  white-space: nowrap;
+}
+
+.count {
+  display: flex;
+  align-items: center;
+  background-color: #4d4382;
+  width: 100%;
+  color: white;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  background-color: grey;
+  width: 100%;
+}

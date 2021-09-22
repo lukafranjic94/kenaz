@@ -11,6 +11,7 @@ import { CategoryArticlesComponent } from './pages/home-container/components/cat
 import { MatCardModule } from '@angular/material/card';
 import { SidebarArticlesComponent } from './components/sidebar-articles/sidebar-articles.component';
 import { MatTabsModule } from '@angular/material/tabs';
+import { SidebarSocialComponent } from './components/sidebar-social/sidebar-social.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { MatTabsModule } from '@angular/material/tabs';
     HomeContainerComponent,
     CategoryArticlesComponent,
     SidebarArticlesComponent,
+    SidebarSocialComponent,
   ],
   imports: [
     BrowserModule,
