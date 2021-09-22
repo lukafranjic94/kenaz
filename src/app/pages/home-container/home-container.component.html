@@ -1,4 +1,9 @@
-<app-category-articles class="article" title="News" [articles]="newsArticles" style="border-left-color: blue;">
-</app-category-articles>
-<app-category-articles class="article" title="Sport" [articles]="sportArticles" style="border-left-color: green;">
-</app-category-articles>
+<div class="main">
+    <app-category-articles class="article" title="News" [articles]="newsArticles" style="border-left-color: blue;">
+    </app-category-articles>
+    <app-category-articles class="article" title="Sport" [articles]="sportArticles" style="border-left-color: green;">
+    </app-category-articles>
+</div>
+<div class="side">
+    <app-sidebar-articles [articles]="popularArticles"></app-sidebar-articles>
+</div>

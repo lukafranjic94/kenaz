@@ -1,0 +1,24 @@
+.group {
+  padding-bottom: 25px;
+  background-color: #4d4382;
+}
+
+.article {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 20px;
+  align-items: center;
+  color: white;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.article:hover {
+  background-color: #433a6e;
+}
+
+.image {
+  width: 70px;
+  height: 70px;
+}

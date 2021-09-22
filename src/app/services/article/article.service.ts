@@ -94,6 +94,10 @@ export class ArticleService {
     );
   }
 
+  public getNPopularArticles(number: number): Array<Article> {
+    return this.getArticles().slice(0, number);
+  }
+
   public getNArticlesForCategoryId(
     categoryId: string,
     number: number

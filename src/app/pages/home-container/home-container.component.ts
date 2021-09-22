@@ -10,9 +10,11 @@ import { ArticleService } from 'src/app/services/article/article.service';
 export class HomeContainerComponent implements OnInit {
   public sportArticles: Array<Article>;
   public newsArticles: Array<Article>;
+  public popularArticles: Array<Article>;
   constructor(private articleService: ArticleService) {
     this.sportArticles = this.articleService.getNArticlesForCategoryId('2', 3);
     this.newsArticles = this.articleService.getNArticlesForCategoryId('1', 3);
+    this.popularArticles = this.articleService.getNPopularArticles(5);
   }
 
   ngOnInit(): void {}

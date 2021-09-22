@@ -1,0 +1,23 @@
+<mat-tab-group class="group" animationDuration="0ms">
+    <mat-tab label="Popular">
+        <ng-template [ngTemplateOutlet]="content"></ng-template>
+    </mat-tab>
+    <mat-tab label="Top Rated">
+        <ng-template [ngTemplateOutlet]="content"></ng-template>
+    </mat-tab>
+    <mat-tab label="Comments">
+        <ng-template [ngTemplateOutlet]="content"></ng-template>
+    </mat-tab>
+</mat-tab-group>
+
+<ng-template #content>
+    <ng-container *ngFor="let article of articles">
+        <div class="article">
+            <div class="content">
+                {{ article.createdAt.toLocaleDateString() }}
+                <h3>{{ article.title }}</h3>
+            </div>
+            <img class="image" src="assets/images/sample_image2.jpg" alt="">
+        </div>
+    </ng-container>
+</ng-template>

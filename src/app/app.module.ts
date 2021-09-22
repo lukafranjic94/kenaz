@@ -9,6 +9,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { HomeContainerComponent } from './pages/home-container/home-container.component';
 import { CategoryArticlesComponent } from './pages/home-container/components/category-articles/category-articles.component';
 import { MatCardModule } from '@angular/material/card';
+import { SidebarArticlesComponent } from './components/sidebar-articles/sidebar-articles.component';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -16,6 +18,7 @@ import { MatCardModule } from '@angular/material/card';
     MainLayoutComponent,
     HomeContainerComponent,
     CategoryArticlesComponent,
+    SidebarArticlesComponent,
   ],
   imports: [
     BrowserModule,
@@ -23,6 +26,7 @@ import { MatCardModule } from '@angular/material/card';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatCardModule,
+    MatTabsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
