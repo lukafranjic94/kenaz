@@ -94,6 +94,15 @@ export class ArticleService {
     );
   }
 
+  public getNArticlesForCategoryId(
+    categoryId: string,
+    number: number
+  ): Array<Article> {
+    return this.getArticles()
+      .filter((article) => article.categoryId === categoryId)
+      .slice(0, number);
+  }
+
   public getArticlesForAuthorId(authorId: string): Array<Article> {
     return this.getArticles().filter(
       (article: Article) => article.authorId === authorId

@@ -1,0 +1,23 @@
+:host {
+  display: block;
+  border-left: 10px solid;
+  width: 100%;
+  background-color: white;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.article {
+  margin: 15px 5px;
+  flex-basis: 35%;
+}
