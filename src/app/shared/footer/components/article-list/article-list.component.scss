@@ -1,0 +1,11 @@
+.image {
+  width: 70px;
+  height: 70px;
+}
+
+.article {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}

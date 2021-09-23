@@ -1,0 +1,10 @@
+<h1>{{ title }}</h1>
+<ng-container *ngFor="let article of articles">
+    <div class="article">
+        <div class="content">
+            <p>{{ article.createdAt.toLocaleDateString() }}</p>
+            <p>{{ article.title }}</p>
+        </div>
+        <img class="image" src="assets/images/sample_image.jpg" alt="">
+    </div>
+</ng-container>

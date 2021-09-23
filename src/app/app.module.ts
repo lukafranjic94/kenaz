@@ -14,6 +14,8 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { SidebarSocialComponent } from './components/sidebar-social/sidebar-social.component';
 import { SidebarVideoComponent } from './components/sidebar-video/sidebar-video.component';
 import { SidebarFacebookComponent } from './components/sidebar-facebook/sidebar-facebook.component';
+import { FooterComponent } from './shared/footer/footer.component';
+import { ArticleListComponent } from './shared/footer/components/article-list/article-list.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { SidebarFacebookComponent } from './components/sidebar-facebook/sidebar-
     SidebarSocialComponent,
     SidebarVideoComponent,
     SidebarFacebookComponent,
+    FooterComponent,
+    ArticleListComponent,
   ],
   imports: [
     BrowserModule,

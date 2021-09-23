@@ -1,0 +1,44 @@
+<div class="content">
+    <div class="kenaz">
+        <h1>Kenaz</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus leo ante.</p>
+        <div class="thumbnails">
+            <img src="assets/images/rss_small.svg" alt="">
+            <img src="assets/images/facebook_small.svg" alt="">
+            <img src="assets/images/twitter_small.svg" alt="">
+            <img src="assets/images/dribble_small.svg" alt="">
+            <img src="assets/images/linkedin_small.svg" alt="">
+            <img src="assets/images/youtube_small.svg" alt="">
+            <img src="assets/images/skype_small.svg" alt="">
+        </div>
+    </div>
+    <div class="newsletter">
+        <h1>Newsletter</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus leo ante.</p>
+        <input type="email" placeholder="Your mail">
+    </div>
+    <div class="tags">
+        <h1>Tags Widget</h1>
+        <p>
+            <span class="tag">assueverit</span>
+            <span class="tag">utroquoe</span>
+            <span class="tag">probo</span>
+            <span class="tag">assuev</span>
+        </p>
+        <p>
+            <span class="tag">assueverit</span>
+            <span class="tag">utroquoe</span>
+            <span class="tag">probo</span>
+            <span class="tag">assuev</span>
+        </p>
+        <p>
+            <span class="tag">assueverit</span>
+            <span class="tag">utroquoe</span>
+            <span class="tag">probo</span>
+            <span class="tag">assuev</span>
+        </p>
+    </div>
+    <app-article-list title="Featured" [articles]="featuredArticles"></app-article-list>
+    <app-article-list title="Random Posts" [articles]="randomArticles"></app-article-list>
+    <app-article-list title="Twitter Feed" [articles]="randomArticles"></app-article-list>
+</div>
