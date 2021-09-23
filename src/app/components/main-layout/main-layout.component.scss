@@ -2,6 +2,11 @@
   flex: 1 1 auto;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
 .hidden {
   display: none;
 }
@@ -30,12 +35,14 @@
   background-color: black;
   margin: 0 auto;
   width: 60%;
+  padding: 0;
 }
 
 .toolbar-bottom {
   background-color: #4d4382;
   margin: 0 auto;
   width: 60%;
+  padding: 0;
 }
 
 .search {
