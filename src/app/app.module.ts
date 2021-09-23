@@ -13,6 +13,7 @@ import { SidebarArticlesComponent } from './components/sidebar-articles/sidebar-
 import { MatTabsModule } from '@angular/material/tabs';
 import { SidebarSocialComponent } from './components/sidebar-social/sidebar-social.component';
 import { SidebarVideoComponent } from './components/sidebar-video/sidebar-video.component';
+import { SidebarFacebookComponent } from './components/sidebar-facebook/sidebar-facebook.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { SidebarVideoComponent } from './components/sidebar-video/sidebar-video.
     SidebarArticlesComponent,
     SidebarSocialComponent,
     SidebarVideoComponent,
+    SidebarFacebookComponent,
   ],
   imports: [
     BrowserModule,
