@@ -4,8 +4,16 @@
   justify-content: space-between;
 }
 
+.special-articles {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  column-gap: 20px;
+}
+
 .article {
-  margin-bottom: 10px;
+  margin: 10px 0px;
 }
 
 .main {
@@ -26,9 +34,16 @@
   justify-content: space-between;
 }
 
-.banner {
+.small-banner {
   margin: 20px;
   background-color: white;
   width: 125px;
   height: 125px;
+}
+
+.mid-banner {
+  border: 1px solid black;
+  width: 100%;
+  height: 120px;
+  margin: 10px 0;
 }

@@ -12,6 +12,9 @@ export class HomeContainerComponent implements OnInit {
   public newsArticles: Array<Article>;
   public popularArticles: Array<Article>;
   public businessArticles: Array<Article>;
+  public newsCarousel: Array<Article>;
+  public editorialArticles: Array<Article>;
+  public localNewsArticles: Array<Article>;
   constructor(private articleService: ArticleService) {
     this.sportArticles = this.articleService.getNArticlesForCategoryId('2', 3);
     this.newsArticles = this.articleService.getNArticlesForCategoryId('1', 3);
@@ -20,6 +23,9 @@ export class HomeContainerComponent implements OnInit {
       '1',
       4
     );
+    this.newsCarousel = this.articleService.getNPopularArticles(2);
+    this.editorialArticles = this.articleService.getNPopularArticles(1);
+    this.localNewsArticles = this.articleService.getNPopularArticles(1);
   }
 
   ngOnInit(): void {}

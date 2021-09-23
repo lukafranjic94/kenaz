@@ -1,12 +1,22 @@
 <div class="header">
     <span>{{ title }}</span>
-    <span>see all</span>
+    <ng-container [ngTemplateOutlet]="header === 'link' ? link : arrows"></ng-container>
 </div>
 <div [ngClass]="type ==='vertical' ? 'vertical-content' : 'horizontal-content'">
     <ng-container *ngFor="let article of articles" [ngTemplateOutlet]="type === 'vertical' ? vertical : horizontal"
         [ngTemplateOutletContext]="{article:article}">
     </ng-container>
 </div>
+
+<ng-template #arrows>
+    <div class="arrows">
+        <img class="arrow" src="assets/images/arrow_left.svg" alt="">
+        <img class="arrow" src="assets/images/arrow_right.svg" alt="">
+    </div>
+</ng-template>
+<ng-template #link>
+    <span>see all</span>
+</ng-template>
 
 <ng-template #vertical let-article='article'>
     <mat-card class="article">

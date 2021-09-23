@@ -3,17 +3,30 @@
     </app-category-articles>
     <app-category-articles class="article" title="Sport" [articles]="sportArticles" style="border-left-color: green;">
     </app-category-articles>
-    <app-category-articles class="article" title="Business" [articles]="businessArticles"
-        style="border-left-color: orange" type="horizontal"></app-category-articles>
+    <div class="mid-banner"></div>
+    <app-category-articles class="article" title="Business" [articles]="businessArticles" style="border-left-color: red"
+        type="horizontal"></app-category-articles>
+    <div class="mid-banner"></div>
+    <app-category-articles class="article" style="border-left-color:orange" title="News Carousel"
+        [articles]="newsCarousel" header="arrows">
+    </app-category-articles>
+    <div class="special-articles">
+        <app-category-articles class="special-article" title="Editorials" [articles]="editorialArticles"
+            header="arrows">
+        </app-category-articles>
+        <app-category-articles class="special-article" title="Local News" [articles]="localNewsArticles"
+            header="arrows">
+        </app-category-articles>
+    </div>
 </div>
 <div class="side">
     <app-sidebar-articles [articles]="popularArticles"></app-sidebar-articles>
     <app-sidebar-social></app-sidebar-social>
     <app-sidebar-video></app-sidebar-video>
     <div class="banner-group">
-        <div class="banner">
+        <div class="small-banner">
         </div>
-        <div class="banner">
+        <div class="small-banner">
         </div>
     </div>
     <app-sidebar-facebook></app-sidebar-facebook>

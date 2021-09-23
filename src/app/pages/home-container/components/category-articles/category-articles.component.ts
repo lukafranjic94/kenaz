@@ -11,6 +11,7 @@ export class CategoryArticlesComponent implements OnInit {
   @Input() color: string;
   @Input() title: string;
   @Input() type: string = 'vertical';
+  @Input() header: string = 'link';
   constructor() {}
 
   ngOnInit(): void {}
