@@ -2,6 +2,15 @@
   flex: 1 1 auto;
 }
 
+.main {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  width: 60%;
+  column-gap: 15px;
+  justify-content: space-between;
+}
+
 .header-top {
   background-color: black;
 }
@@ -35,9 +44,4 @@
   width: 60%;
   height: 120px;
   border: 1px solid black;
-}
-
-.content {
-  margin: 0 auto;
-  width: 60%;
 }

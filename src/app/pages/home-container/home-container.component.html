@@ -1,38 +1,17 @@
-<div class="container">
-    <div class="main">
-        <app-category-articles class="article" title="News" [articles]="newsArticles" style="border-left-color: blue;">
-        </app-category-articles>
-        <app-category-articles class="article" title="Sport" [articles]="sportArticles"
-            style="border-left-color: green;">
-        </app-category-articles>
-        <div class="mid-banner"></div>
-        <app-category-articles class="article" title="Business" [articles]="businessArticles"
-            style="border-left-color: red" type="horizontal"></app-category-articles>
-        <div class="mid-banner"></div>
-        <app-category-articles class="article" style="border-left-color:orange" title="News Carousel"
-            [articles]="newsCarousel" header="arrows">
-        </app-category-articles>
-        <div class="special-articles">
-            <app-category-articles class="special-article" title="Editorials" [articles]="editorialArticles"
-                header="arrows">
-            </app-category-articles>
-            <app-category-articles class="special-article" title="Local News" [articles]="localNewsArticles"
-                header="arrows">
-            </app-category-articles>
-        </div>
-    </div>
-    <div class="side">
-        <app-sidebar-articles [articles]="popularArticles"></app-sidebar-articles>
-        <app-sidebar-social></app-sidebar-social>
-        <app-sidebar-video></app-sidebar-video>
-        <div class="banner-group">
-            <div class="small-banner">
-            </div>
-            <div class="small-banner">
-            </div>
-        </div>
-        <app-sidebar-facebook></app-sidebar-facebook>
-    </div>
+<app-category-articles class="article" title="News" [articles]="newsArticles" style="border-left-color: blue;">
+</app-category-articles>
+<app-category-articles class="article" title="Sport" [articles]="sportArticles" style="border-left-color: green;">
+</app-category-articles>
+<div class="mid-banner"></div>
+<app-category-articles class="article" title="Business" [articles]="businessArticles" style="border-left-color: red"
+    type="horizontal"></app-category-articles>
+<div class="mid-banner"></div>
+<app-category-articles class="article" style="border-left-color:orange" title="News Carousel" [articles]="newsCarousel"
+    header="arrows">
+</app-category-articles>
+<div class="special-articles">
+    <app-category-articles class="special-article" title="Editorials" [articles]="editorialArticles" header="arrows">
+    </app-category-articles>
+    <app-category-articles class="special-article" title="Local News" [articles]="localNewsArticles" header="arrows">
+    </app-category-articles>
 </div>
-
-<div class="big-banner"></div>

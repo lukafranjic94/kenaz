@@ -16,6 +16,7 @@ import { SidebarVideoComponent } from './components/sidebar-video/sidebar-video.
 import { SidebarFacebookComponent } from './components/sidebar-facebook/sidebar-facebook.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { ArticleListComponent } from './shared/footer/components/article-list/article-list.component';
+import { SidebarComponent } from './shared/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { ArticleListComponent } from './shared/footer/components/article-list/ar
     SidebarFacebookComponent,
     FooterComponent,
     ArticleListComponent,
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,

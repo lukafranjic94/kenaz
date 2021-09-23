@@ -1,0 +1,17 @@
+:host {
+  max-width: 300px;
+}
+
+.banner-group {
+  background-color: gray;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.small-banner {
+  margin: 20px;
+  background-color: white;
+  width: 125px;
+  height: 125px;
+}
