@@ -12,6 +12,7 @@ import { MatCardModule } from '@angular/material/card';
 import { SidebarArticlesComponent } from './components/sidebar-articles/sidebar-articles.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { SidebarSocialComponent } from './components/sidebar-social/sidebar-social.component';
+import { SidebarVideoComponent } from './components/sidebar-video/sidebar-video.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { SidebarSocialComponent } from './components/sidebar-social/sidebar-soci
     CategoryArticlesComponent,
     SidebarArticlesComponent,
     SidebarSocialComponent,
+    SidebarVideoComponent,
   ],
   imports: [
     BrowserModule,
