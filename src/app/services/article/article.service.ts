@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { IRawArticle } from 'src/app/interfaces/raw-article.interface';
+import { Category } from '../category/category.model';
+import { CategoryService } from '../category/category.service';
 import { LoremIpsumService } from '../lorem-ipsum/lorem-ipsum.service';
 import { Article } from './article.model';
 
@@ -88,6 +90,22 @@ export class ArticleService {
     );
   }
 
+  public getArticlesForCategoryName(categoryName: string): Array<Article> {
+    const category: Category | undefined = this.categoryService
+      .getCategories()
+      .find(
+        (category: Category) =>
+          category.name.toLowerCase() === categoryName.toLowerCase()
+      );
+    if (category) {
+      return this.getArticles().filter(
+        (article: Article) => article.categoryId === category.id
+      );
+    } else {
+      return [];
+    }
+  }
+
   public getArticlesForCategoryId(categoryId: string): Array<Article> {
     return this.getArticles().filter(
       (article: Article) => article.categoryId === categoryId
@@ -113,5 +131,8 @@ export class ArticleService {
     );
   }
 
-  constructor(private loremIpsum: LoremIpsumService) {}
+  constructor(
+    private loremIpsum: LoremIpsumService,
+    private categoryService: CategoryService
+  ) {}
 }

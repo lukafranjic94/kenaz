@@ -19,7 +19,7 @@ export class CategoryService {
 
   constructor() {}
 
-  private getCategories(): Array<Category> {
+  public getCategories(): Array<Category> {
     return this.categories.map((rawCategory) => new Category(rawCategory));
   }
 

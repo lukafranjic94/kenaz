@@ -1,0 +1,18 @@
+<h1>News</h1>
+<ng-container *ngFor="let article of articles">
+    <div class="article">
+        <h2>{{ article.title }}</h2>
+        <div class="misc">
+            <span>{{ article.createdAt.toLocaleDateString() }}</span>
+            <span>Author: {{ article.authorId }}</span>
+            <span>12 Comments</span>
+        </div>
+        <div class="content">
+            <img class="image" src="assets/images/sample_image.jpg" alt="">
+            <div class="text">
+                <p>{{ article.body }}</p>
+                <button>Read article</button>
+            </div>
+        </div>
+    </div>
+</ng-container>
