@@ -2,6 +2,10 @@
   flex: 1 1 auto;
 }
 
+.hidden {
+  display: none;
+}
+
 .main {
   display: flex;
   flex-direction: row;
