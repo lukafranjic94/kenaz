@@ -2,15 +2,30 @@
     <span>{{ title }}</span>
     <span>see all</span>
 </div>
-<div class="content">
-    <ng-container *ngFor="let article of articles">
-        <mat-card class="article">
-            <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-                alt="Photo of a Shiba Inu">
-            <mat-card-content>
-                <p>{{ article.createdAt.toLocaleDateString() }}</p>
-                <p>{{ article.title }}</p>
-            </mat-card-content>
-        </mat-card>
+<div [ngClass]="type ==='vertical' ? 'vertical-content' : 'horizontal-content'">
+    <ng-container *ngFor="let article of articles" [ngTemplateOutlet]="type === 'vertical' ? vertical : horizontal"
+        [ngTemplateOutletContext]="{article:article}">
     </ng-container>
 </div>
+
+<ng-template #vertical let-article='article'>
+    <mat-card class="article">
+        <img class="vertical-image" mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+            alt="Photo of a Shiba Inu">
+        <mat-card-content>
+            <p>{{ article.createdAt.toLocaleDateString() }}</p>
+            <p>{{ article.title }}</p>
+        </mat-card-content>
+    </mat-card>
+</ng-template>
+
+<ng-template #horizontal let-article='article'>
+    <div class="horizontal-card">
+        <img class="horizontal-image" src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+            alt="Photo of a Shiba Inu">
+        <div class="horizontal-card-content">
+            <p>{{ article.createdAt.toLocaleDateString() }}</p>
+            <p>{{ article.title }}</p>
+        </div>
+    </div>
+</ng-template>

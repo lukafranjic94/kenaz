@@ -11,12 +11,38 @@
   justify-content: space-between;
 }
 
-.content {
+.vertical-content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin: 0 40px;
+  flex-wrap: wrap;
+}
+
+.horizontal-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 40px;
+}
+
+.horizontal-image {
+  max-width: 120px;
+}
+
+.horizontal-card-content {
+  margin-left: 10px;
+}
+
+.horizontal-card {
+  flex: 1 0 35%;
+  margin: 15px 5px;
+  display: flex;
+  flex-direction: row;
 }
 
 .article {
   margin: 15px 5px;
+  max-width: 170px;
 }

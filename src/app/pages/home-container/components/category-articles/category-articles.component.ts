@@ -10,6 +10,7 @@ export class CategoryArticlesComponent implements OnInit {
   @Input() articles: Array<Article>;
   @Input() color: string;
   @Input() title: string;
+  @Input() type: string = 'vertical';
   constructor() {}
 
   ngOnInit(): void {}
