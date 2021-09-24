@@ -1,5 +1,7 @@
 :host {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
   background-color: white;
   p {
     margin-top: 0px;
@@ -7,8 +9,9 @@
   h1,
   h2,
   h3 {
-    margin-top: 0px;
+    margin: 0px;
   }
+  padding: 30px;
 }
 .content {
   display: flex;
@@ -21,4 +24,48 @@
 .image {
   width: 170px;
   height: 125px;
+}
+
+.misc {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 60%;
+  align-items: center;
+}
+
+.date {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  border-bottom: 1px solid #dddddd;
+  padding-bottom: 60px;
+}
+
+.btn {
+  background-color: #4d4382;
+  border: none;
+  padding: 5px 20px;
+  color: white;
+  cursor: pointer;
+}
+
+.pagination {
+  display: flex;
+  column-gap: 5px;
+  span {
+    background-color: #dddddd;
+    color: #4d4382;
+    padding: 8px 12px;
+  }
+  span:hover {
+    background-color: #4d4382;
+    color: white;
+  }
 }

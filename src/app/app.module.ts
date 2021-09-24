@@ -18,6 +18,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { ArticleListComponent } from './shared/footer/components/article-list/article-list.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { CategoryContainerComponent } from './pages/category-container/category-container.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { CategoryContainerComponent } from './pages/category-container/category-
     MatToolbarModule,
     MatCardModule,
     MatTabsModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

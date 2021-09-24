@@ -3,7 +3,10 @@
     <div class="article">
         <h2>{{ article.title }}</h2>
         <div class="misc">
-            <span>{{ article.createdAt.toLocaleDateString() }}</span>
+            <div class="date">
+                <mat-icon>event</mat-icon>
+                {{ article.createdAt.toLocaleDateString() }}
+            </div>
             <span>Author: {{ article.authorId }}</span>
             <span>12 Comments</span>
         </div>
@@ -11,8 +14,20 @@
             <img class="image" src="assets/images/sample_image.jpg" alt="">
             <div class="text">
                 <p>{{ article.body }}</p>
-                <button>Read article</button>
+                <button class="btn">Read article</button>
             </div>
         </div>
     </div>
 </ng-container>
+<div class="pagination">
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>4</span>
+    <span>5</span>
+    <span>6</span>
+    <span>7</span>
+    <span>8</span>
+    <span>9</span>
+    <span>10</span>
+</div>
