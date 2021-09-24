@@ -1,11 +1,35 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
 .image {
   width: 70px;
   height: 70px;
+  border: 2px solid white;
 }
 
 .article {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: top;
+  column-gap: 20px;
+  border-bottom: 1px solid #666666;
+  padding-bottom: 15px;
+}
+
+.article:last-of-type {
+  border: none;
+}
+
+.date {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.content {
+  flex: 1;
 }

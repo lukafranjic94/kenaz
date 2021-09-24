@@ -1,6 +1,6 @@
 :host {
-  border-top: 20px solid purple;
-  background-color: black;
+  border-top: 20px solid #4d4382;
+  background-color: #252525;
   display: block;
   color: white;
 }
@@ -11,10 +11,62 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 15px;
+  row-gap: 60px;
+}
+
+.input {
+  input {
+    border: none;
+    padding: 15px 0px 15px 15px;
+    background-color: #333333;
+    color: #999999;
+    outline: none;
+  }
+  .btn {
+    background-color: #4d4382;
+    border: none;
+    padding: 15px 10px;
+    color: #cccccc;
+    cursor: pointer;
+  }
 }
 
 .thumbnails {
   display: flex;
   flex-direction: row;
   column-gap: 5px;
+}
+
+.copyright {
+  width: 60%;
+  border-top: 1px solid #666666;
+  padding: 15px 0px 100px 0px;
+  margin: 15px auto 0px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tags {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.tag {
+  padding: 5px 10px;
+  background-color: #333333;
+  color: #666666;
+  cursor: pointer;
+}
+
+.tag:hover {
+  color: #cccccc;
+  background-color: #4d4382;
+}
+
+.tag-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  column-gap: 10px;
 }

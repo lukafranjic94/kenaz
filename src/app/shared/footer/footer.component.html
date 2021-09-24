@@ -15,30 +15,37 @@
     <div class="newsletter">
         <h1>Newsletter</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus leo ante.</p>
-        <input type="email" placeholder="Your mail">
+        <div class="input">
+            <input type="email" placeholder="Your mail">
+            <button class="btn">Subscribe</button>
+        </div>
     </div>
     <div class="tags">
         <h1>Tags Widget</h1>
-        <p>
+        <div class="tag-row">
             <span class="tag">assueverit</span>
             <span class="tag">utroquoe</span>
             <span class="tag">probo</span>
             <span class="tag">assuev</span>
-        </p>
-        <p>
+        </div>
+        <div class="tag-row">
             <span class="tag">assueverit</span>
+            <span class="tag">veritas</span>
+            <span class="tag">probo</span>
+            <span class="tag">mentar</span>
+        </div>
+        <div class="tag-row">
+            <span class="tag">perak</span>
             <span class="tag">utroquoe</span>
             <span class="tag">probo</span>
             <span class="tag">assuev</span>
-        </p>
-        <p>
-            <span class="tag">assueverit</span>
-            <span class="tag">utroquoe</span>
-            <span class="tag">probo</span>
-            <span class="tag">assuev</span>
-        </p>
+        </div>
     </div>
     <app-article-list title="Featured" [articles]="featuredArticles"></app-article-list>
     <app-article-list title="Random Posts" [articles]="randomArticles"></app-article-list>
     <app-article-list title="Twitter Feed" [articles]="randomArticles"></app-article-list>
+</div>
+<div class="copyright">
+    <span>2013 - Kenaz Template - Proudly made at Plava Tvornica Croatia</span>
+    <span>Typography - Template - Contact Form - 404 Page</span>
 </div>
