@@ -19,6 +19,7 @@ import { ArticleListComponent } from './shared/footer/components/article-list/ar
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { CategoryContainerComponent } from './pages/category-container/category-container.component';
 import { MatIconModule } from '@angular/material/icon';
+import { HeaderComponent } from './shared/header/header.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { MatIconModule } from '@angular/material/icon';
     ArticleListComponent,
     SidebarComponent,
     CategoryContainerComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
