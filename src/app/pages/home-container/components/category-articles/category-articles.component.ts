@@ -12,7 +12,14 @@ export class CategoryArticlesComponent implements OnInit {
   @Input() title: string;
   @Input() type: string = 'vertical';
   @Input() header: string = 'link';
-  constructor() {}
+  public dateOptions: Intl.DateTimeFormatOptions;
+  constructor() {
+    this.dateOptions = {
+      month: 'long',
+      day: 'numeric',
+      year: 'numeric',
+    };
+  }
 
   ngOnInit(): void {}
 }

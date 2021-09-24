@@ -3,20 +3,22 @@
   border-left: 10px solid;
   width: 100%;
   background-color: white;
+  padding: 15px 30px 30px 30px;
 }
 
 .header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding-bottom: 30px;
 }
 
 .vertical-content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 0 40px;
   flex-wrap: wrap;
+  column-gap: 20px;
 }
 
 .horizontal-content {
@@ -24,7 +26,12 @@
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin: 0 40px;
+  row-gap: 30px;
+  column-gap: 5px;
+}
+
+.horizontal-card-content {
+  padding-left: 15px;
 }
 
 .arrow {
@@ -35,18 +42,19 @@
   max-width: 120px;
 }
 
-.horizontal-card-content {
-  margin-left: 10px;
-}
-
 .horizontal-card {
   flex: 1 1 35%;
-  margin: 15px 5px;
   display: flex;
   flex-direction: row;
 }
 
 .article {
-  margin: 15px 5px;
-  flex: 1 1 15%;
+  flex: 1 1 30%;
+  background-color: white;
+  color: black;
+  box-shadow: none;
+  padding: 0;
+  img {
+    width: 100%;
+  }
 }

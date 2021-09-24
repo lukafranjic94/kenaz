@@ -15,15 +15,15 @@
     </div>
 </ng-template>
 <ng-template #link>
-    <span>see all</span>
+    <span>See all</span>
 </ng-template>
 
 <ng-template #vertical let-article='article'>
     <mat-card class="article">
-        <img class="vertical-image" mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+        <img class="vertical-image" src="https://material.angular.io/assets/img/examples/shiba2.jpg"
             alt="Photo of a Shiba Inu">
         <mat-card-content>
-            <p>{{ article.createdAt.toLocaleDateString() }}</p>
+            <p>{{ article.createdAt.toLocaleDateString('en-US', dateOptions) }}</p>
             <p>{{ article.title }}</p>
         </mat-card-content>
     </mat-card>
@@ -34,7 +34,7 @@
         <img class="horizontal-image" src="https://material.angular.io/assets/img/examples/shiba2.jpg"
             alt="Photo of a Shiba Inu">
         <div class="horizontal-card-content">
-            <p>{{ article.createdAt.toLocaleDateString() }}</p>
+            <p>{{ article.createdAt.toLocaleDateString('en-US', dateOptions) }}</p>
             <p>{{ article.title }}</p>
         </div>
     </div>
