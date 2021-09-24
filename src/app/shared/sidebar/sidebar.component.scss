@@ -1,5 +1,8 @@
 :host {
   max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
 }
 
 .banner-group {
