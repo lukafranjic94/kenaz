@@ -1,3 +1,24 @@
 body {
   background-color: lightgray;
 }
+
+app-sidebar-articles {
+  .mat-tab-label {
+    min-width: 0 !important;
+    padding: 3px !important;
+    margin: 3px !important;
+  }
+
+  .mat-tab-label-active {
+    color: #fcc44d;
+  }
+
+  .mat-tab-labels {
+    background-color: #433a6e;
+    color: white;
+  }
+
+  .mat-ink-bar {
+    width: 0px !important;
+  }
+}

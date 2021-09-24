@@ -8,7 +8,14 @@ import { Article } from 'src/app/services/article/article.model';
 })
 export class SidebarArticlesComponent implements OnInit {
   @Input() articles: Array<Article>;
-  constructor() {}
+  public dateOptions: Intl.DateTimeFormatOptions;
+  constructor() {
+    this.dateOptions = {
+      month: 'long',
+      day: 'numeric',
+      year: 'numeric',
+    };
+  }
 
   ngOnInit(): void {}
 }
