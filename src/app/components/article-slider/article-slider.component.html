@@ -1,0 +1,18 @@
+<div class="content">
+    <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig" (init)="slickInit($event)"
+        (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)" (beforeChange)="beforeChange($event)">
+        <div ngxSlickItem *ngFor="let article of articles" class="slide">
+            <img class="image" src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="" width="100%">
+            <div class="article">
+                <div class="article-info">
+                    <span>{{ article.createdAt.toLocaleDateString('en-US', dateOptions) }}</span>
+                    <span>22 comments</span>
+                </div>
+                <h1 class="title">{{ article.title }}</h1>
+                <button [routerLink]="['/articles', currentArticle.id]" class="btn">Read article</button>
+            </div>
+        </div>
+    </ngx-slick-carousel>
+    <img class="prev" src="assets/images/arrow_left.png" />
+    <img class="next" src="assets/images/arrow_right.png" />
+</div>

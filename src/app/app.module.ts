@@ -21,6 +21,8 @@ import { CategoryContainerComponent } from './pages/category-container/category-
 import { MatIconModule } from '@angular/material/icon';
 import { HeaderComponent } from './shared/header/header.component';
 import { ArticleContainerComponent } from './pages/article-container/article-container.component';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { ArticleSliderComponent } from './components/article-slider/article-slider.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,7 @@ import { ArticleContainerComponent } from './pages/article-container/article-con
     CategoryContainerComponent,
     HeaderComponent,
     ArticleContainerComponent,
+    ArticleSliderComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,6 +50,7 @@ import { ArticleContainerComponent } from './pages/article-container/article-con
     MatCardModule,
     MatTabsModule,
     MatIconModule,
+    SlickCarouselModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

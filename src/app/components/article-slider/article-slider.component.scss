@@ -1,0 +1,52 @@
+.image {
+  width: 100%;
+  height: 425px;
+}
+
+.content {
+  position: relative;
+}
+
+.slide {
+  position: relative;
+}
+
+.prev {
+  position: absolute;
+  z-index: 2;
+  top: 212px;
+  left: 30px;
+  cursor: pointer;
+}
+
+.next {
+  position: absolute;
+  z-index: 2;
+  top: 212px;
+  right: 30px;
+  cursor: pointer;
+}
+
+.article-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  column-gap: 30px;
+}
+
+.article {
+  position: absolute;
+  z-index: 2;
+  bottom: 25px;
+  left: 30px;
+  color: white;
+}
+
+.btn {
+  background-color: transparent;
+  outline: none;
+  width: 120px;
+  height: 30px;
+  cursor: pointer;
+  color: white;
+}
