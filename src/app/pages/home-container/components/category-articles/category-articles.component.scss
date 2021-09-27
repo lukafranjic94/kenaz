@@ -44,11 +44,14 @@
 
 .horizontal-card {
   flex: 1 1 35%;
+  text-decoration: none;
+  color: black;
   display: flex;
   flex-direction: row;
 }
 
 .article {
+  text-decoration: none;
   flex: 1 1 30%;
   background-color: white;
   color: black;

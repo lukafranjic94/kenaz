@@ -90,6 +90,10 @@ export class ArticleService {
     );
   }
 
+  public getArticle(articleId: string): Article | undefined {
+    return this.getArticles().find((article) => article.id === articleId);
+  }
+
   public getArticlesForCategoryName(categoryName: string): Array<Article> {
     const category: Category | undefined = this.categoryService
       .getCategories()

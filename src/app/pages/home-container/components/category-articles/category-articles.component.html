@@ -19,23 +19,27 @@
 </ng-template>
 
 <ng-template #vertical let-article='article'>
-    <mat-card class="article">
-        <img class="vertical-image" src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-            alt="Photo of a Shiba Inu">
-        <mat-card-content>
-            <p>{{ article.createdAt.toLocaleDateString('en-US', dateOptions) }}</p>
-            <p>{{ article.title }}</p>
-        </mat-card-content>
-    </mat-card>
+    <a class="article" [routerLink]="['/articles', article.id]">
+        <mat-card class="article">
+            <img class="vertical-image" src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+                alt="Photo of a Shiba Inu">
+            <mat-card-content>
+                <p>{{ article.createdAt.toLocaleDateString('en-US', dateOptions) }}</p>
+                <p>{{ article.title }}</p>
+            </mat-card-content>
+        </mat-card>
+    </a>
 </ng-template>
 
 <ng-template #horizontal let-article='article'>
-    <div class="horizontal-card">
-        <img class="horizontal-image" src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-            alt="Photo of a Shiba Inu">
-        <div class="horizontal-card-content">
-            <p>{{ article.createdAt.toLocaleDateString('en-US', dateOptions) }}</p>
-            <p>{{ article.title }}</p>
+    <a class="horizontal-card" [routerLink]="['/articles', article.id]">
+        <div class="horizontal-card">
+            <img class="horizontal-image" src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+                alt="Photo of a Shiba Inu">
+            <div class="horizontal-card-content">
+                <p>{{ article.createdAt.toLocaleDateString('en-US', dateOptions) }}</p>
+                <p>{{ article.title }}</p>
+            </div>
         </div>
-    </div>
+    </a>
 </ng-template>

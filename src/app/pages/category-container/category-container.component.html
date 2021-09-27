@@ -14,7 +14,7 @@
             <img class="image" src="assets/images/sample_image.jpg" alt="">
             <div class="text">
                 <p>{{ article.body }}</p>
-                <button class="btn">Read article</button>
+                <button [routerLink]="['/articles', article.id]" class="btn">Read article</button>
             </div>
         </div>
     </div>

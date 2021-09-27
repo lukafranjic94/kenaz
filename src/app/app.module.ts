@@ -20,6 +20,7 @@ import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { CategoryContainerComponent } from './pages/category-container/category-container.component';
 import { MatIconModule } from '@angular/material/icon';
 import { HeaderComponent } from './shared/header/header.component';
+import { ArticleContainerComponent } from './pages/article-container/article-container.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { HeaderComponent } from './shared/header/header.component';
     SidebarComponent,
     CategoryContainerComponent,
     HeaderComponent,
+    ArticleContainerComponent,
   ],
   imports: [
     BrowserModule,
