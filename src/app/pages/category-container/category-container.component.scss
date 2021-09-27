@@ -1,4 +1,4 @@
-:host {
+.main-content {
   display: flex;
   flex-direction: column;
   row-gap: 20px;
@@ -13,7 +13,13 @@
   }
   padding: 30px;
 }
-.content {
+
+.main {
+  display: flex;
+  flex-direction: row;
+  column-gap: 15px;
+}
+.article-content {
   display: flex;
   flex-direction: row;
   column-gap: 20px;

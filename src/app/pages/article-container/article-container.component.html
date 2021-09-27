@@ -1,45 +1,56 @@
-<ng-container *ngIf="article">
-    <div class="body">
-        <p>{{ article.body }}</p>
-        <img src="assets/images/social_bar.png" alt="">
-    </div>
-    <div class="mid-banner"></div>
+<div class="main">
+    <div class="main-content">
+        <ng-container *ngIf="article">
+            <div class="body">
+                <p>{{ article.body }}</p>
+                <img src="assets/images/social_bar.png" alt="">
+            </div>
+            <div class="mid-banner"></div>
 
-    <div class="author">
-        <h1>About the Author</h1>
-        <div class="author-info">
-            <img src="assets/images/author_image.png" alt="">
-            <p>Molestias ultricies, ante quam urna ut volutpat, egestas dolor dui, nec hac ultrices nulla non netus.
-                Placerat vehicula donec non suscipit egestas, augue vel suspendisse. Et felis venenatis blandit sed est
-                ultrices, adipiscing urna, at aliquam nullam facilisis aliquet sapien, eget duis consectetuer tristique
-                nunc
-                vitae erat, mi purus nisl lorem. </p>
-        </div>
-    </div>
+            <div class="author">
+                <h1>About the Author</h1>
+                <div class="author-info">
+                    <img src="assets/images/author_image.png" alt="">
+                    <p>Molestias ultricies, ante quam urna ut volutpat, egestas dolor dui, nec hac ultrices nulla non
+                        netus.
+                        Placerat vehicula donec non suscipit egestas, augue vel suspendisse. Et felis venenatis blandit
+                        sed est
+                        ultrices, adipiscing urna, at aliquam nullam facilisis aliquet sapien, eget duis consectetuer
+                        tristique
+                        nunc
+                        vitae erat, mi purus nisl lorem. </p>
+                </div>
+            </div>
 
-    <ng-container *ngIf="comments">
-        <div class="comments">
-            <h1>Comments</h1>
-            <ng-container *ngFor="let comment of comments">
-                <div class="comment">
-                    <img class="comment-image" src="assets/images/thumbnail_avatar.png" alt="">
-                    <div class="comment-body">
-                        <div class="comment-info">
-                            <span>{{ comment.name }}</span>
-                            <span>{{ comment.createdAt.toLocaleString('en-US', dateOptions) }}</span>
-                            <span class="reply-link">Reply</span>
+            <ng-container *ngIf="comments">
+                <div class="comments">
+                    <h1>Comments</h1>
+                    <ng-container *ngFor="let comment of comments">
+                        <div class="comment">
+                            <img class="comment-image" src="assets/images/thumbnail_avatar.png" alt="">
+                            <div class="comment-body">
+                                <div class="comment-info">
+                                    <span>{{ comment.name }}</span>
+                                    <span>{{ comment.createdAt.toLocaleString('en-US', dateOptions) }}</span>
+                                    <span class="reply-link">Reply</span>
+                                </div>
+                                <p>{{ comment.body }}</p>
+                            </div>
                         </div>
-                        <p>{{ comment.body }}</p>
-                    </div>
+                    </ng-container>
+                    <h1>Add your comment</h1>
+                    <form class="form">
+                        <input class="form-field name-field" type="text" name="name" id="name" placeholder="Name">
+                        <input class="form-field email-field" type="email" name="email" id="email"
+                            placeholder="Email Address">
+                        <textarea class="form-field body-field" name="body" id="body" placeholder="Comment"></textarea>
+                        <button class="btn">Submit</button>
+                    </form>
                 </div>
             </ng-container>
-            <h1>Add your comment</h1>
-            <form class="form">
-                <input class="form-field name-field" type="text" name="name" id="name" placeholder="Name">
-                <input class="form-field email-field" type="email" name="email" id="email" placeholder="Email Address">
-                <textarea class="form-field body-field" name="body" id="body" placeholder="Comment"></textarea>
-                <button class="btn">Submit</button>
-            </form>
-        </div>
-    </ng-container>
-</ng-container>
+        </ng-container>
+    </div>
+    <div class="sidebar">
+        <app-sidebar></app-sidebar>
+    </div>
+</div>
