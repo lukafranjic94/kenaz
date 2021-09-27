@@ -11,7 +11,74 @@
   }
 }
 
+.reply-link {
+  text-align: end;
+  flex: 1;
+}
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  row-gap: 45px;
+}
+
+.comment-image {
+  width: 57px;
+  height: 58px;
+}
+
+.comment {
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+}
+
+.email-field,
+.name-field {
+  width: 50%;
+  height: 40px;
+}
+
+.body-field {
+  width: 100%;
+  height: 180px;
+  padding-top: 10px;
+}
+
+.form-field {
+  padding-left: 18px;
+  background-color: #dddddd;
+  border: none;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+
+.btn {
+  width: 150px;
+  height: 50px;
+  border: none;
+  color: white;
+  background-color: #4d4382;
+}
+
+.comment-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  column-gap: 10px;
+  margin-bottom: 10px;
+}
+
 .body {
+  background-color: white;
+  padding: 35px 20px 15px 30px;
+}
+
+.comments {
   background-color: white;
   padding: 35px 20px 15px 30px;
 }
