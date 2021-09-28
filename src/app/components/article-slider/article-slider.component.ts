@@ -19,6 +19,7 @@ export class ArticleSliderComponent implements OnInit {
   ngOnInit(): void {
     this.currentArticle = this.articles[0];
   }
+
   slides = [
     { img: 'http://placehold.it/350x150/000000' },
     { img: 'http://placehold.it/350x150/111111' },
@@ -26,31 +27,7 @@ export class ArticleSliderComponent implements OnInit {
     { img: 'http://placehold.it/350x150/666666' },
   ];
   slideConfig = {
-    prevArrow: '.prev',
-    nextArrow: '.next',
+    prevArrow: '.article-slider-prev',
+    nextArrow: '.article-slider-next',
   };
-
-  addSlide() {
-    this.slides.push({ img: 'http://placehold.it/350x150/777777' });
-  }
-
-  removeSlide() {
-    this.slides.length = this.slides.length - 1;
-  }
-
-  slickInit(e: any) {
-    console.log('slick initialized');
-  }
-
-  breakpoint(e: any) {
-    console.log('breakpoint');
-  }
-
-  afterChange(e: any) {
-    console.log('afterChange');
-  }
-
-  beforeChange(e: any) {
-    console.log('beforeChange');
-  }
 }

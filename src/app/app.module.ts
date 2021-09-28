@@ -23,6 +23,7 @@ import { HeaderComponent } from './shared/header/header.component';
 import { ArticleContainerComponent } from './pages/article-container/article-container.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { ArticleSliderComponent } from './components/article-slider/article-slider.component';
+import { ImageSliderComponent } from './pages/home-container/components/image-slider/image-slider.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { ArticleSliderComponent } from './components/article-slider/article-slid
     HeaderComponent,
     ArticleContainerComponent,
     ArticleSliderComponent,
+    ImageSliderComponent,
   ],
   imports: [
     BrowserModule,
