@@ -17,6 +17,7 @@ export class ArticleService {
       author_id: '1',
       category_id: '2',
       created_at: '2021-05-25',
+      img_url: 'assets/images/sample_image2.jpg',
     },
     {
       id: '2',
@@ -25,6 +26,7 @@ export class ArticleService {
       author_id: '2',
       category_id: '1',
       created_at: '2021-04-28',
+      img_url: 'assets/images/sample_image3.jpg',
     },
     {
       id: '3',
@@ -33,6 +35,7 @@ export class ArticleService {
       author_id: '1',
       category_id: '1',
       created_at: '2021-03-11',
+      img_url: 'assets/images/sample_image4.jpg',
     },
     {
       id: '4',
@@ -41,6 +44,7 @@ export class ArticleService {
       author_id: '1',
       category_id: '1',
       created_at: '2021-08-05',
+      img_url: 'assets/images/sample_image5.jpg',
     },
     {
       id: '5',
@@ -49,6 +53,7 @@ export class ArticleService {
       author_id: '1',
       category_id: '1',
       created_at: '2021-06-02',
+      img_url: 'assets/images/sample_image6.jpg',
     },
     {
       id: '6',
@@ -57,6 +62,7 @@ export class ArticleService {
       author_id: '2',
       category_id: '2',
       created_at: '2021-04-30',
+      img_url: 'assets/images/sample_image7.jpg',
     },
     {
       id: '7',
@@ -65,6 +71,7 @@ export class ArticleService {
       author_id: '2',
       category_id: '2',
       created_at: '2021-01-30',
+      img_url: 'assets/images/sample_image8.jpg',
     },
     {
       id: '8',
@@ -73,6 +80,7 @@ export class ArticleService {
       author_id: '2',
       category_id: '2',
       created_at: '2021-07-29',
+      img_url: 'assets/images/sample_image9.jpg',
     },
     {
       id: '9',
@@ -81,6 +89,7 @@ export class ArticleService {
       author_id: '1',
       category_id: '2',
       created_at: '2021-03-15',
+      img_url: 'assets/images/sample_image10.jpg',
     },
   ];
 

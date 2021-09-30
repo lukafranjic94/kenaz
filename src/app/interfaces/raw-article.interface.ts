@@ -5,4 +5,5 @@ export interface IRawArticle {
   created_at: string;
   author_id: string;
   category_id: string;
+  img_url: string;
 }

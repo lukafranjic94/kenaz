@@ -22,7 +22,7 @@
                     {{ article.createdAt.toLocaleDateString('en-US', dateOptions) }}
                     <h3>{{ article.title }}</h3>
                 </div>
-                <img class="image" src="assets/images/sample_image2.jpg" alt="">
+                <img class="image" [src]="article.imgUrl" alt="">
             </div>
         </a>
     </ng-container>

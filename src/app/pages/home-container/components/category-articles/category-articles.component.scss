@@ -38,8 +38,27 @@
   margin: 0px 10px;
 }
 
+.small-image {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+}
+
+.big-image {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
 .horizontal-image {
-  max-width: 120px;
+  width: 175px;
+  height: 120px;
+}
+
+.vertical-image {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
 }
 
 .horizontal-card {
@@ -57,7 +76,4 @@
   color: black;
   box-shadow: none;
   padding: 0;
-  img {
-    width: 100%;
-  }
 }

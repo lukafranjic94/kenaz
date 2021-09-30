@@ -22,12 +22,6 @@ export class ArticleSliderComponent implements OnInit {
     this.currentArticle = this.articles[0];
   }
 
-  slides = [
-    { img: 'http://placehold.it/350x150/000000' },
-    { img: 'http://placehold.it/350x150/111111' },
-    { img: 'http://placehold.it/350x150/333333' },
-    { img: 'http://placehold.it/350x150/666666' },
-  ];
   slideConfig = {
     arrows: false,
     draggable: false,

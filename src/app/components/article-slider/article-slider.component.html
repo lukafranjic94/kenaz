@@ -1,7 +1,7 @@
 <div class="content article-slider">
     <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
         <div ngxSlickItem *ngFor="let article of articles" class="slide">
-            <img class="image" src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="" width="100%">
+            <img class="image" [src]="article.imgUrl" alt="" width="100%">
             <div class="article">
                 <div class="article-info">
                     <span>{{ article.createdAt.toLocaleDateString('en-US', dateOptions) }}</span>

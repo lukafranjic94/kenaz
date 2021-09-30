@@ -21,7 +21,7 @@
 <ng-template #vertical let-article='article'>
     <a class="article" [routerLink]="['/articles', article.id]">
         <mat-card class="article">
-            <img class="vertical-image" src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+            <img [ngClass]="header === 'link' ? 'small-image' : 'big-image'" [src]="article.imgUrl"
                 alt="Photo of a Shiba Inu">
             <mat-card-content>
                 <p>{{ article.createdAt.toLocaleDateString('en-US', dateOptions) }}</p>
@@ -34,8 +34,7 @@
 <ng-template #horizontal let-article='article'>
     <a class="horizontal-card" [routerLink]="['/articles', article.id]">
         <div class="horizontal-card">
-            <img class="horizontal-image" src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-                alt="Photo of a Shiba Inu">
+            <img class="horizontal-image" [src]="article.imgUrl" alt="Photo of a Shiba Inu">
             <div class="horizontal-card-content">
                 <p>{{ article.createdAt.toLocaleDateString('en-US', dateOptions) }}</p>
                 <p>{{ article.title }}</p>

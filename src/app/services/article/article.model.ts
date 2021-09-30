@@ -7,6 +7,7 @@ export class Article {
   public createdAt: Date;
   public authorId: string;
   public categoryId: string;
+  public imgUrl: string;
 
   constructor(rawArticle: IRawArticle) {
     this.title = rawArticle.title;
@@ -15,5 +16,6 @@ export class Article {
     this.body = rawArticle.body;
     this.authorId = rawArticle.author_id;
     this.categoryId = rawArticle.category_id;
+    this.imgUrl = rawArticle.img_url;
   }
 }
