@@ -1,15 +1,15 @@
-<ngx-slick-carousel class="carousel first-carousel" #slickModal="slick-carousel" [config]="slideConfig">
+<ngx-slick-carousel class="carousel first-carousel" #mainCarousel="slick-carousel" [config]="slideConfig">
     <div ngxSlickItem *ngFor="let slide of slides" class="slide">
         <img class="image" [src]="slide.img" alt="" width="100%">
     </div>
 </ngx-slick-carousel>
 <div class="overlay">
     <div class="navigation">
-        <img class="prev" src="assets/images/arrow_left.png" />
+        <img class="prev" (click)="prev()" src="assets/images/arrow_left.png" />
         <img src="assets/images/search.svg" alt="">
-        <img class="next" src="assets/images/arrow_right.png" />
+        <img class="next" (click)="next()" src="assets/images/arrow_right.png" />
     </div>
-    <ngx-slick-carousel class="carousel second-carousel" #slickModal="slick-carousel" [config]="navConfig">
+    <ngx-slick-carousel class="carousel second-carousel" #reelCarousel="slick-carousel" [config]="navConfig">
         <div ngxSlickItem *ngFor="let slide of slides" class="image-reel">
             <img [src]="slide.img">
         </div>
