@@ -1,3 +1,5 @@
+@use 'utils/typography';
+
 .header-top {
   background-color: #333333;
 }
@@ -16,6 +18,18 @@
 .tb-item {
   padding: 0 20px;
 }
+
+.tb-logo {
+  font-family: typography.$font-family-bitter;
+  font-size: 24px;
+}
+
+.tb-info {
+  font-family: typography.$font-family-varela-round;
+  font-size: 14px;
+  cursor: pointer;
+}
+
 .toolbar-top {
   background-color: #333333;
   margin: 0 auto;
@@ -57,6 +71,9 @@ span {
 .tb-category {
   border-bottom: 5px solid;
   text-transform: uppercase;
+  font-family: typography.$font-family-bitter;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .tb-category:hover {
