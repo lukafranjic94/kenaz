@@ -1,3 +1,13 @@
+<ng-container *ngIf="article">
+    <div class="article-header">
+        <img class="article-image" [src]="article.imgUrl" alt="">
+        <img class="blend" src="assets/images/blend.png" alt="">
+        <div class="article-info">
+            <span>{{ article.createdAt.toLocaleDateString('en-US', dateOptions) }}</span>
+            <h1 class="article-title">{{ article.title }}</h1>
+        </div>
+    </div>
+</ng-container>
 <div class="main">
     <div class="main-content">
         <ng-container *ngIf="article">

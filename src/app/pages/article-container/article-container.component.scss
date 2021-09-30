@@ -11,6 +11,30 @@
   }
 }
 
+.blend {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  left: 0px;
+}
+.article-header {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.article-info {
+  position: absolute;
+  z-index: 1;
+  bottom: 50px;
+  left: 50px;
+  color: black;
+}
+
+.article-image {
+  width: 100%;
+  height: 580px;
+}
+
 .main {
   display: flex;
   flex-direction: row;
