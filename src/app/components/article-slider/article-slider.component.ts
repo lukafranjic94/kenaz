@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { SlickCarouselComponent } from 'ngx-slick-carousel';
 import { Article } from 'src/app/services/article/article.model';
 
 @Component({
@@ -14,6 +15,7 @@ export class ArticleSliderComponent implements OnInit {
     month: 'long',
     year: 'numeric',
   };
+  @ViewChild('slickModal') public slickModal: SlickCarouselComponent;
   constructor() {}
 
   ngOnInit(): void {
@@ -27,7 +29,15 @@ export class ArticleSliderComponent implements OnInit {
     { img: 'http://placehold.it/350x150/666666' },
   ];
   slideConfig = {
-    prevArrow: '.article-slider-prev',
-    nextArrow: '.article-slider-next',
+    arrows: false,
+    draggable: false,
   };
+
+  public next(): void {
+    this.slickModal.slickNext();
+  }
+
+  public prev(): void {
+    this.slickModal.slickPrev();
+  }
 }
