@@ -15,7 +15,7 @@
                     <span>12 Comments</span>
                 </div>
                 <div class="article-content">
-                    <img class="image" src="assets/images/sample_image.jpg" alt="">
+                    <img class="image" [src]="article.imgUrl" alt="">
                     <div class="text">
                         <p>{{ article.body }}</p>
                         <button [routerLink]="['/articles', article.id]" class="btn">Read article</button>
