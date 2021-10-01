@@ -17,10 +17,10 @@
                 <div class="content">
                     <div class="comment-info">
                         <img src="assets/images/speech_bubble.png" alt="">
-                        <span>5</span>
+                        <span class="comment-count">5</span>
                     </div>
-                    {{ article.createdAt.toLocaleDateString('en-US', dateOptions) }}
-                    <h3>{{ article.title }}</h3>
+                    <span class="date">{{ article.createdAt.toLocaleDateString('en-US', dateOptions) }}</span>
+                    <span class="title">{{ article.title }}</span>
                 </div>
                 <img class="image" [src]="article.imgUrl" alt="">
             </div>

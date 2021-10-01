@@ -31,6 +31,12 @@ app-sidebar-articles {
     margin: 3px !important;
   }
 
+  .mat-tab-label-content {
+    font-family: typography.$font-family-varela-round;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
   .mat-tab-label-active {
     color: #fcc44d;
   }

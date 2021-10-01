@@ -1,6 +1,34 @@
+@use 'utils/colors';
+@use 'utils/typography';
+
 .group {
-  padding-bottom: 25px;
-  background-color: #4d4382;
+  padding-bottom: 35px;
+  background-color: colors.$victoria;
+}
+
+.date {
+  font-family: typography.$font-family-varela-round;
+  font-size: 14px;
+  color: colors.$sidebar-dark;
+}
+
+.comment-count {
+  font-family: typography.$font-family-varela-round;
+  font-size: 14px;
+  color: colors.$sidebar-dark;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3px;
+}
+
+.title {
+  font-family: typography.$font-family-bitter;
+  font-size: 18px;
+  font-weight: bold;
+  color: colors.$white;
 }
 
 .article-link {
@@ -12,26 +40,21 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 10px 20px;
+  padding: 15px 20px;
   align-items: center;
   color: white;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid colors.$black;
   column-gap: 20px;
-  h3 {
-    margin: 0;
-    padding: 0;
-  }
 }
 
 .article:hover {
-  background-color: #433a6e;
+  background-color: colors.$sidebar-article-hover;
 }
 
 .image {
   width: 70px;
   height: 70px;
-  border: 2px solid white;
+  border: 2px solid colors.$white;
 }
 
 .comment-info {
