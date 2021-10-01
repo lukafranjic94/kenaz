@@ -1,7 +1,24 @@
+@use 'utils/colors';
+@use 'utils/typography';
+
 :host {
   display: flex;
   flex-direction: column;
   row-gap: 15px;
+}
+
+a {
+  text-decoration: none;
+  border-bottom: 1px solid colors.$footer-dark;
+}
+
+a:last-of-type {
+  border: none;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 25px;
 }
 
 .image {
@@ -16,18 +33,23 @@
   justify-content: space-between;
   align-items: top;
   column-gap: 20px;
-  border-bottom: 1px solid #666666;
   padding-bottom: 15px;
-}
-
-.article:last-of-type {
-  border: none;
 }
 
 .date {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  color: colors.$footer-dark;
+  font-family: typography.$font-family-varela;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.article-title {
+  color: colors.$footer-light;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .content {

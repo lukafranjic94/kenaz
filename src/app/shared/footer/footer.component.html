@@ -1,6 +1,9 @@
 <div class="content">
     <div class="kenaz">
-        <h1>Kenaz</h1>
+        <div class="kenaz-title">
+            <img class="kenaz-logo" src="assets/images/logo_blue.png" alt="">
+            <h1>Kenaz</h1>
+        </div>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus leo ante.</p>
         <div class="thumbnails">
             <img src="assets/images/rss_small.svg" alt="">
@@ -15,7 +18,7 @@
     <div class="newsletter">
         <h1>Newsletter</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus leo ante.</p>
-        <div class="input">
+        <div class="newsletter-input">
             <input type="email" placeholder="Your mail">
             <button class="btn">Subscribe</button>
         </div>
@@ -43,9 +46,9 @@
     </div>
     <app-article-list title="Featured" [articles]="featuredArticles"></app-article-list>
     <app-article-list title="Random Posts" [articles]="randomArticles"></app-article-list>
-    <app-article-list title="Twitter Feed" [articles]="randomArticles"></app-article-list>
+    <app-tweets></app-tweets>
 </div>
 <div class="copyright">
-    <span>2013 - Kenaz Template - Proudly made at Plava Tvornica Croatia</span>
+    <span>@ 2013 - Kenaz Template - Proudly made at Plava Tvornica Croatia</span>
     <span>Typography - Template - Contact Form - 404 Page</span>
 </div>

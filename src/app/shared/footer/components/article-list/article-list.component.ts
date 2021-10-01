@@ -9,6 +9,11 @@ import { Article } from 'src/app/services/article/article.model';
 export class ArticleListComponent implements OnInit {
   @Input() public articles: Array<Article>;
   @Input() public title: string;
+  public dateOptions: Intl.DateTimeFormatOptions = {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  };
   constructor() {}
 
   ngOnInit(): void {}

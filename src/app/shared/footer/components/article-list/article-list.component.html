@@ -1,13 +1,15 @@
 <h1>{{ title }}</h1>
 <ng-container *ngFor="let article of articles">
-    <div class="article">
-        <div class="content">
-            <div class="date">
-                <span>{{ article.createdAt.toLocaleDateString() }}</span>
-                <span>5</span>
+    <a [routerLink]="['articles', article.id]">
+        <div class="article">
+            <div class="content">
+                <div class="date">
+                    <span>{{ article.createdAt.toLocaleDateString('en-US', dateOptions) }}</span>
+                    <span>5</span>
+                </div>
+                <span class="article-title">{{ article.title }}</span>
             </div>
-            <p>{{ article.title }}</p>
+            <img class="image" [src]="article.imgUrl" alt="">
         </div>
-        <img class="image" src="assets/images/sample_image.jpg" alt="">
-    </div>
+    </a>
 </ng-container>
