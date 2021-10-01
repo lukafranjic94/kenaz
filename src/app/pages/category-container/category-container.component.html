@@ -3,22 +3,22 @@
 <div class="main">
     <div class="main-content">
         <h1>News</h1>
-        <ng-container *ngFor="let article of articles">
+        <ng-container *ngFor="let data of templateData">
             <div class="article">
-                <h2>{{ article.title }}</h2>
+                <h2>{{ data.article.title }}</h2>
                 <div class="misc">
                     <div class="date">
                         <mat-icon>event</mat-icon>
-                        {{ article.createdAt.toLocaleDateString() }}
+                        {{ data.article.createdAt.toLocaleDateString() }}
                     </div>
-                    <span>Author: {{ article.authorId }}</span>
+                    <span>Author: {{ data.author.fullName }}</span>
                     <span>12 Comments</span>
                 </div>
                 <div class="article-content">
-                    <img class="image" [src]="article.imgUrl" alt="">
+                    <img class="image" [src]="data.article.imgUrl" alt="">
                     <div class="text">
-                        <p>{{ article.body }}</p>
-                        <button [routerLink]="['/articles', article.id]" class="btn">Read article</button>
+                        <p>{{ data.article.body }}</p>
+                        <button [routerLink]="['/articles', data.article]" class="btn">Read article</button>
                     </div>
                 </div>
             </div>
