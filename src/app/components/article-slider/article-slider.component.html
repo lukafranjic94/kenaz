@@ -5,7 +5,10 @@
             <div class="article">
                 <div class="article-info">
                     <span>{{ article.createdAt.toLocaleDateString('en-US', dateOptions) }}</span>
-                    <span>22 comments</span>
+                    <div class="comment-count">
+                        <img src="assets/images/speech_bubble.png" alt="">
+                        <span>22 comments</span>
+                    </div>
                 </div>
                 <h1 class="title">{{ article.title }}</h1>
                 <button [routerLink]="['/articles', article.id]" class="btn">Read article</button>
