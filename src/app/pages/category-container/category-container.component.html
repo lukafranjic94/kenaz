@@ -2,27 +2,29 @@
 
 <div class="main">
     <div class="main-content">
-        <h1>News</h1>
-        <ng-container *ngFor="let data of templateData">
-            <div class="article">
-                <h2>{{ data.article.title }}</h2>
-                <div class="misc">
-                    <div class="date">
-                        <mat-icon>event</mat-icon>
-                        {{ data.article.createdAt.toLocaleDateString() }}
+        <div class="article-list">
+            <h1>News</h1>
+            <ng-container *ngFor="let data of templateData">
+                <div class="article">
+                    <h2>{{ data.article.title }}</h2>
+                    <div class="misc">
+                        <div class="date">
+                            <mat-icon>event</mat-icon>
+                            {{ data.article.createdAt.toLocaleDateString() }}
+                        </div>
+                        <span>Author: {{ data.author.fullName }}</span>
+                        <span>12 Comments</span>
                     </div>
-                    <span>Author: {{ data.author.fullName }}</span>
-                    <span>12 Comments</span>
-                </div>
-                <div class="article-content">
-                    <img class="image" [src]="data.article.imgUrl" alt="">
-                    <div class="text">
-                        <p>{{ data.article.body }}</p>
-                        <button [routerLink]="['/articles', data.article]" class="btn">Read article</button>
+                    <div class="article-content">
+                        <img class="image" [src]="data.article.imgUrl" alt="">
+                        <div class="text">
+                            <p>{{ data.article.body }}</p>
+                            <button [routerLink]="['/articles', data.article.id]" class="btn">Read article</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </ng-container>
+            </ng-container>
+        </div>
         <div class="pagination">
             <span>1</span>
             <span>2</span>
