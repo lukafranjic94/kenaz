@@ -1,0 +1,21 @@
+<!--
+<ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+    <div ngxSlickItem *ngFor="let article of articles" class="slide">
+        <img [src]="article.imgUrl" alt="">
+    </div>
+</ngx-slick-carousel>
+-->
+<div class="header">
+    <h1 class="title">{{ title }}</h1>
+    <div class="arrows">
+        <img (click)="prev()" [src]="leftArrowUrl" alt="">
+        <img (click)="next()" [src]="rightArrowUrl" alt="">
+    </div>
+</div>
+<ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+    <a [routerLink]="['articles', article.id]" ngxSlickItem *ngFor="let article of articles" class="slide">
+        <img [src]="article.imgUrl" alt="">
+        <span class="date">{{ article.createdAt.toLocaleDateString('en-US', dateOptions) }}</span>
+        <span class="article-title">{{ article.title }}</span>
+    </a>
+</ngx-slick-carousel>

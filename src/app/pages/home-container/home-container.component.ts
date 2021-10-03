@@ -23,9 +23,9 @@ export class HomeContainerComponent implements OnInit {
       '1',
       4
     );
-    this.newsCarousel = this.articleService.getNPopularArticles(2);
-    this.editorialArticles = this.articleService.getNPopularArticles(1);
-    this.localNewsArticles = this.articleService.getNPopularArticles(1);
+    this.newsCarousel = this.articleService.getPopular().slice(0, 4);
+    this.editorialArticles = this.articleService.getPopular().slice(0, 4);
+    this.localNewsArticles = this.articleService.getPopular().slice(0, 4);
   }
 
   ngOnInit(): void {}

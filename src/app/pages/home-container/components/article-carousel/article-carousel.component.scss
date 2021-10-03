@@ -1,0 +1,58 @@
+@use 'utils/colors';
+@use 'utils/typography';
+
+:host {
+  background-color: colors.$white;
+  border-left: 10px solid;
+  padding: 15px 0px;
+  width: 100%;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: typography.$font-family-bitter;
+}
+
+.header {
+  margin: 0px 30px 30px 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.arrows {
+  img {
+    margin: 0px 10px;
+    cursor: pointer;
+    color: blue;
+  }
+}
+
+.carousel {
+  margin: 0px 15px 0px 15px;
+  img {
+    height: 230px;
+  }
+}
+
+.slide {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  padding: 0px 15px 0px 15px;
+}
+
+.date {
+  font-family: typography.$font-family-varela-round;
+  font-size: 14px;
+  color: #666666;
+}
+
+.article-title {
+  font-family: typography.$font-family-bitter;
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+}

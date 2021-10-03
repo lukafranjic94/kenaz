@@ -10,16 +10,14 @@
         <app-category-articles class="article" title="Business" [articles]="businessArticles"
             style="border-left-color: red" type="horizontal"></app-category-articles>
         <div class="mid-banner"></div>
-        <app-category-articles class="article" style="border-left-color:orange" title="News Carousel"
-            [articles]="newsCarousel" header="arrows">
-        </app-category-articles>
+        <app-article-carousel [displayAmount]=2 class="carousel" style="border-left-color:orange" title="News Carousel"
+            [articles]="newsCarousel">
+        </app-article-carousel>
         <div class="special-articles">
-            <app-category-articles class="special-article" title="Editorials" [articles]="editorialArticles"
-                header="arrows">
-            </app-category-articles>
-            <app-category-articles class="special-article" title="Local News" [articles]="localNewsArticles"
-                header="arrows">
-            </app-category-articles>
+            <app-article-carousel class="special-article" title="Editorials" [articles]="editorialArticles">
+            </app-article-carousel>
+            <app-article-carousel class="special-article" title="Local News" [articles]="localNewsArticles">
+            </app-article-carousel>
         </div>
     </div>
     <div class="sidebar">

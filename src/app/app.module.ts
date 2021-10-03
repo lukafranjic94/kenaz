@@ -25,6 +25,7 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { ArticleSliderComponent } from './components/article-slider/article-slider.component';
 import { ImageSliderComponent } from './pages/home-container/components/image-slider/image-slider.component';
 import { TweetsComponent } from './shared/footer/components/tweets/tweets.component';
+import { ArticleCarouselComponent } from './pages/home-container/components/article-carousel/article-carousel.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { TweetsComponent } from './shared/footer/components/tweets/tweets.compon
     ArticleSliderComponent,
     ImageSliderComponent,
     TweetsComponent,
+    ArticleCarouselComponent,
   ],
   imports: [
     BrowserModule,
