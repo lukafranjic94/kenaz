@@ -1,20 +1,22 @@
 <app-article-slider [articles]="newsArticles"></app-article-slider>
 <div class="main">
     <div class="content">
-        <app-category-articles class="article" title="News" [articles]="newsArticles" style="border-left-color: blue;">
+        <app-category-articles class="article" title="News" [articles]="newsArticles"
+            style="border-left-color: #3677B5;">
         </app-category-articles>
         <app-category-articles class="article" title="Sport" [articles]="sportArticles"
-            style="border-left-color: green;">
+            style="border-left-color: #84C14F;">
         </app-category-articles>
         <div class="mid-banner"></div>
         <app-category-articles class="article" title="Business" [articles]="businessArticles"
-            style="border-left-color: red" type="horizontal"></app-category-articles>
+            style="border-left-color: #EE6151" type="horizontal"></app-category-articles>
         <div class="mid-banner"></div>
-        <app-article-carousel [displayAmount]=2 class="carousel" style="border-left-color:orange" title="News Carousel"
+        <app-article-carousel [displayAmount]=2 class="carousel" style="border-left-color:#FCC44D" title="News Carousel"
             [articles]="newsCarousel">
         </app-article-carousel>
         <div class="special-articles">
-            <app-article-carousel class="special-article" title="Editorials" [articles]="editorialArticles">
+            <app-article-carousel class="special-article" title="Editorials" [articles]="editorialArticles"
+                style="border-left-color:#A99765">
             </app-article-carousel>
             <app-article-carousel class="special-article" title="Local News" [articles]="localNewsArticles">
             </app-article-carousel>
