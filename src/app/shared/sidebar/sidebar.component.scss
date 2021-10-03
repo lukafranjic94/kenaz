@@ -1,20 +1,20 @@
 :host {
   display: flex;
   flex-direction: column;
-  row-gap: 15px;
+  background-color: #dddddd;
   width: 100%;
 }
 
 .banner-group {
-  background-color: gray;
+  padding: 20px;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  column-gap: 15px;
+  justify-content: space-around;
 }
 
 .small-banner {
-  margin: 20px;
   background-color: white;
-  width: 125px;
-  height: 125px;
+  width: 170px;
+  height: 170px;
 }
