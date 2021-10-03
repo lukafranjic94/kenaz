@@ -18,6 +18,7 @@ interface ITemplateData {
 export class CategoryContainerComponent implements OnInit {
   public templateData: Array<ITemplateData>;
   public articles: Array<Article>;
+  public categoryName: string;
   public dateOptions: Intl.DateTimeFormatOptions = {
     month: 'long',
     day: 'numeric',
@@ -35,6 +36,7 @@ export class CategoryContainerComponent implements OnInit {
       if (!categoryName) {
         throw new Error('category not found');
       }
+      this.categoryName = categoryName;
       this.templateData = this.articleService
         .getArticlesForCategoryName(categoryName)
         .map((article: Article) => {

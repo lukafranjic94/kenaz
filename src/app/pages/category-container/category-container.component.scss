@@ -127,3 +127,7 @@ h1 {
   height: 120px;
   border: 1px solid colors.$black;
 }
+
+.title {
+  text-transform: capitalize;
+}
