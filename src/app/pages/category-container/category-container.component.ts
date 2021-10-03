@@ -18,6 +18,11 @@ interface ITemplateData {
 export class CategoryContainerComponent implements OnInit {
   public templateData: Array<ITemplateData>;
   public articles: Array<Article>;
+  public dateOptions: Intl.DateTimeFormatOptions = {
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric',
+  };
   constructor(
     private route: ActivatedRoute,
     private articleService: ArticleService,

@@ -1,3 +1,6 @@
+@use 'utils/colors';
+@use 'utils/typography';
+
 :host {
   display: flex;
   flex-direction: column;
@@ -10,13 +13,13 @@
   flex-direction: column;
   row-gap: 20px;
   flex: 2;
-  background-color: white;
   p {
     margin-top: 0px;
   }
 }
 
 .article-list {
+  background-color: colors.$white;
   display: flex;
   flex-direction: column;
   row-gap: 20px;
@@ -50,8 +53,11 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 60%;
+  width: 55%;
   align-items: center;
+  font-family: typography.$font-family-varela-round;
+  font-size: 12px;
+  color: #666666;
 }
 
 .date {
@@ -71,22 +77,53 @@
 .btn {
   background-color: #4d4382;
   border: none;
-  padding: 5px 20px;
-  color: white;
+  width: 125px;
+  height: 35px;
+  font-family: typography.$font-family-varela-round;
+  font-size: 14px;
+  color: colors.$white;
   cursor: pointer;
 }
 
 .pagination {
-  margin: 0px 0px 30px 30px;
+  margin: 10px 0px 30px 30px;
   display: flex;
   column-gap: 5px;
   span {
+    display: block;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #dddddd;
     color: #4d4382;
-    padding: 8px 12px;
+    font-family: typography.$font-family-varela-round;
+    font-size: 14px;
+    cursor: pointer;
   }
   span:hover {
     background-color: #4d4382;
     color: white;
   }
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: typography.$font-family-bitter;
+  color: #363f48;
+}
+
+.article-body {
+  font-family: typography.$font-family-bitter;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.banner {
+  width: 100%;
+  background-color: colors.$white;
+  height: 120px;
+  border: 1px solid colors.$black;
 }
