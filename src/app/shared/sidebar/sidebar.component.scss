@@ -1,7 +1,7 @@
 :host {
   display: flex;
   flex-direction: column;
-  background-color: #dddddd;
+  row-gap: 30px;
   width: 100%;
 }
 
@@ -9,12 +9,13 @@
   padding: 20px;
   width: 100%;
   display: flex;
+  background-color: #dddddd;
   column-gap: 15px;
   justify-content: space-around;
 }
 
 .small-banner {
   background-color: white;
-  width: 170px;
-  height: 170px;
+  width: 125px;
+  height: 125px;
 }

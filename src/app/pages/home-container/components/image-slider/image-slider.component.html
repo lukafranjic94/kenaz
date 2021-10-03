@@ -11,7 +11,7 @@
     </div>
     <ngx-slick-carousel class="carousel second-carousel" #reelCarousel="slick-carousel" [config]="navConfig">
         <div ngxSlickItem *ngFor="let slide of slides" class="image-reel">
-            <img [src]="slide.img">
+            <img class="nav-img" [src]="slide.img">
         </div>
     </ngx-slick-carousel>
 </div>
