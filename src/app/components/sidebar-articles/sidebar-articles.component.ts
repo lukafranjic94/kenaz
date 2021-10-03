@@ -7,7 +7,8 @@ import { Article } from 'src/app/services/article/article.model';
   styleUrls: ['./sidebar-articles.component.scss'],
 })
 export class SidebarArticlesComponent implements OnInit {
-  @Input() articles: Array<Article>;
+  @Input() popularArticles: Array<Article>;
+  @Input() topRatedArticles: Array<Article>;
   public dateOptions: Intl.DateTimeFormatOptions;
   constructor() {
     this.dateOptions = {

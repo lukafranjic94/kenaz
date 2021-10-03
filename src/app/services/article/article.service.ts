@@ -91,11 +91,32 @@ export class ArticleService {
       created_at: '2021-03-15',
       img_url: 'assets/images/sample_image10.jpg',
     },
+    {
+      id: '10',
+      title: 'The Wonders of Mochi',
+      body: this.loremIpsum.getDummyText(),
+      author_id: '2',
+      category_id: '1',
+      created_at: '2021-12-11',
+      img_url: 'assets/images/sample_image11.jpg',
+    },
   ];
 
   private getArticles(): Array<Article> {
     return this.articles.map(
       (rawArticle: IRawArticle) => new Article(rawArticle)
+    );
+  }
+
+  public getTopRated(): Array<Article> {
+    return this.getArticles().filter(
+      (article: Article, index: number) => index % 2 === 0
+    );
+  }
+
+  public getPopular() {
+    return this.getArticles().filter(
+      (article: Article, index: number) => index % 2 === 1
     );
   }
 

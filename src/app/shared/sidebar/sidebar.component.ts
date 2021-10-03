@@ -8,10 +8,9 @@ import { ArticleService } from 'src/app/services/article/article.service';
   styleUrls: ['./sidebar.component.scss'],
 })
 export class SidebarComponent implements OnInit {
-  public popularArticles: Array<Article>;
-  constructor(private articleService: ArticleService) {
-    this.popularArticles = this.articleService.getNPopularArticles(5);
-  }
+  public popularArticles: Array<Article> = this.articleService.getPopular();
+  public topRatedArticles: Array<Article> = this.articleService.getTopRated();
+  constructor(private articleService: ArticleService) {}
 
   ngOnInit(): void {}
 }
