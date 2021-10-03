@@ -1,5 +1,5 @@
 <div class="header">
-    <span>{{ title }}</span>
+    <span class="title">{{ title }}</span>
     <ng-container [ngTemplateOutlet]="header === 'link' ? link : arrows"></ng-container>
 </div>
 <div [ngClass]="type ==='vertical' ? 'vertical-content' : 'horizontal-content'">
@@ -14,8 +14,9 @@
         <img class="arrow" src="assets/images/arrow_right.svg" alt="">
     </div>
 </ng-template>
+
 <ng-template #link>
-    <span>See all</span>
+    <a [routerLink]="categoryUrl" class="link">See all</a>
 </ng-template>
 
 <ng-template #vertical let-article='article'>
@@ -23,9 +24,9 @@
         <mat-card class="article">
             <img [ngClass]="header === 'link' ? 'small-image' : 'big-image'" [src]="article.imgUrl"
                 alt="Photo of a Shiba Inu">
-            <mat-card-content>
-                <p>{{ article.createdAt.toLocaleDateString('en-US', dateOptions) }}</p>
-                <p>{{ article.title }}</p>
+            <mat-card-content class="card-content">
+                <span class="date">{{ article.createdAt.toLocaleDateString('en-US', dateOptions) }}</span>
+                <span class="article-title">{{ article.title }}</span>
             </mat-card-content>
         </mat-card>
     </a>
@@ -36,8 +37,8 @@
         <div class="horizontal-card">
             <img class="horizontal-image" [src]="article.imgUrl" alt="Photo of a Shiba Inu">
             <div class="horizontal-card-content">
-                <p>{{ article.createdAt.toLocaleDateString('en-US', dateOptions) }}</p>
-                <p>{{ article.title }}</p>
+                <span class="date">{{ article.createdAt.toLocaleDateString('en-US', dateOptions) }}</span>
+                <span class="article-title">{{ article.title }}</span>
             </div>
         </div>
     </a>

@@ -1,9 +1,27 @@
+@use 'utils/colors';
+@use 'utils/typography';
+
 :host {
   display: block;
   border-left: 10px solid;
   width: 100%;
   background-color: white;
   padding: 15px 30px 30px 30px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: typography.$font-family-bitter;
+  color: #363f48;
+}
+
+.link {
+  font-size: 14px;
+  font-family: typography.$font-family-varela-round;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  color: #3677b5;
 }
 
 .header {
@@ -32,6 +50,10 @@
 
 .horizontal-card-content {
   padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  column-gap: 5px;
+  margin-top: 10px;
 }
 
 .arrow {
@@ -76,4 +98,22 @@
   color: black;
   box-shadow: none;
   padding: 0;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+
+.date {
+  font-family: typography.$font-family-varela-round;
+  font-size: 14px;
+  color: #666666;
+}
+
+.article-title {
+  font-family: typography.$font-family-bitter;
+  font-size: 18px;
+  font-weight: bold;
 }
