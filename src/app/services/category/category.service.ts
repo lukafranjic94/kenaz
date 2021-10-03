@@ -15,6 +15,10 @@ export class CategoryService {
       id: '2',
       name: 'Sport',
     },
+    {
+      id: '3',
+      name: 'News',
+    },
   ];
 
   constructor() {}

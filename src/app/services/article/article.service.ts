@@ -100,6 +100,33 @@ export class ArticleService {
       created_at: '2021-12-11',
       img_url: 'assets/images/sample_image11.jpg',
     },
+    {
+      id: '11',
+      title: 'Old School Baseball',
+      body: this.loremIpsum.getDummyText(),
+      author_id: '2',
+      category_id: '3',
+      created_at: '2021-01-30',
+      img_url: 'assets/images/sample_image8.jpg',
+    },
+    {
+      id: '12',
+      title: 'The Wonders Of Economics',
+      body: this.loremIpsum.getDummyText(),
+      author_id: '1',
+      category_id: '3',
+      created_at: '2021-06-02',
+      img_url: 'assets/images/sample_image6.jpg',
+    },
+    {
+      id: '4',
+      title: '9 Ways Binance Can Make You Invincible',
+      body: this.loremIpsum.getDummyText(),
+      author_id: '1',
+      category_id: '3',
+      created_at: '2021-08-05',
+      img_url: 'assets/images/sample_image5.jpg',
+    },
   ];
 
   private getArticles(): Array<Article> {
