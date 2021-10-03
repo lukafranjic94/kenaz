@@ -1,3 +1,6 @@
+@use 'utils/colors';
+@use 'utils/typography';
+
 .main-content {
   display: flex;
   flex-direction: column;
@@ -7,6 +10,19 @@
     padding: 0;
     margin: 0;
   }
+}
+
+.article-date {
+  font-family: typography.$font-family-varela;
+  font-size: 14px;
+}
+
+.article-title {
+  font-size: 44px;
+}
+
+.inserted-image {
+  width: 100%;
 }
 
 .sidebar {
@@ -26,6 +42,9 @@
 
 .article-info {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
   z-index: 1;
   bottom: 50px;
   left: 50px;
@@ -65,6 +84,18 @@
   column-gap: 20px;
 }
 
+.comment-name {
+  font-family: typography.$font-family-bitter;
+  font-size: 18px;
+  color: colors.$victoria;
+}
+
+.comment-date {
+  font-family: typography.$font-family-varela;
+  font-size: 12px;
+  color: #666666;
+}
+
 .email-field,
 .name-field {
   width: 50%;
@@ -81,6 +112,8 @@
   padding-left: 18px;
   background-color: #dddddd;
   border: none;
+  font-family: typography.$font-family-varela;
+  font-size: 14px;
 }
 
 .form {
@@ -101,13 +134,33 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  align-items: center;
   column-gap: 10px;
   margin-bottom: 10px;
 }
 
 .body {
   background-color: white;
-  padding: 35px 20px 15px 30px;
+  display: flex;
+  p {
+    padding: 35px 20px 15px 30px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  flex-direction: column;
+  row-gap: 35px;
+}
+
+.author-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.comments {
+  h1 {
+    font-size: 24px;
+    font-weight: bold;
+  }
 }
 
 .comments {
@@ -127,10 +180,30 @@
   margin: 10px 0;
 }
 
+.comment-body {
+  font-family: typography.$font-family-varela;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.reply-link {
+  cursor: pointer;
+  color: colors.$victoria;
+  font-family: typography.$font-family-varela-round;
+  font-size: 14px;
+}
+
 .author-info {
-  margin-top: 30px;
+  margin: 30px 0px;
   display: flex;
   flex-direction: row;
   column-gap: 20px;
   align-items: center;
+}
+
+.author-about {
+  font-size: 16px;
+  font-family: typography.$font-family-varela;
+  font-weight: normal;
+  line-height: 20px;
 }
