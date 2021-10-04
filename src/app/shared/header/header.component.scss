@@ -1,5 +1,6 @@
 @use 'utils/typography';
 @use 'utils/colors';
+@use 'utils/layout';
 
 .header-top {
   background-color: colors.$mine-shaft;
@@ -36,7 +37,7 @@
 .toolbar-top {
   background-color: colors.$mine-shaft;
   margin: 0 auto;
-  width: 940px;
+  width: layout.$main-container-width;
   height: 53px;
   padding: 0;
 }
@@ -44,7 +45,7 @@
 .toolbar-bottom {
   background-color: colors.$victoria;
   margin: 0 auto;
-  width: 940px;
+  width: layout.$main-container-width;
   height: 53px;
   padding: 0;
 }

@@ -26,7 +26,8 @@ h5 {
 }
 
 app-sidebar-articles {
-  .mat-tab-label {
+  .mat-tab-label,
+  .mat-tab-label-active {
     min-width: 0 !important;
     padding: 3px !important;
     margin: 3px !important;

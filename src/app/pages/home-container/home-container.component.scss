@@ -1,3 +1,5 @@
+@use 'utils/layout';
+
 :host {
   display: flex;
   flex-direction: column;
@@ -8,20 +10,19 @@
 .content {
   display: flex;
   flex-direction: column;
+  width: layout.$main-content-width;
   row-gap: 15px;
-  flex: 2;
-  min-width: 300px;
 }
 
 .sidebar {
-  flex: 1;
+  min-width: 0;
 }
 
 .main {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  column-gap: 15px;
+  column-gap: 17px;
   width: 100%;
 }
 

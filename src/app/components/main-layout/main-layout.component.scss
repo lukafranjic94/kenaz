@@ -1,11 +1,13 @@
+@use 'utils/layout';
+
 .main {
   margin: 0 auto;
-  width: 940px;
+  width: layout.$main-container-width;
 }
 
 .banner {
   margin: 16px auto;
-  width: 940px;
+  width: layout.$main-container-width;
   height: 120px;
   background-color: white;
   border: 1px solid black;
