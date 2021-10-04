@@ -46,7 +46,7 @@ p {
 }
 
 .content {
-  width: 60%;
+  width: 940px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -82,15 +82,18 @@ p {
 }
 
 .copyright {
-  width: 60%;
-  border-top: 1px solid colors.$footer-dark;
-  padding: 15px 0px 100px 0px;
+  width: 940px;
   margin: 15px auto 0px auto;
   display: flex;
   justify-content: space-between;
   font-size: 12px;
   color: colors.$footer-light;
   font-family: typography.$font-family-varela-round;
+}
+
+.copyright-wrapper {
+  width: 100%;
+  border-top: 1px solid colors.$footer-dark;
 }
 
 .tags {

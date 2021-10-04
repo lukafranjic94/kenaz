@@ -3,6 +3,7 @@
 
 .header-top {
   background-color: colors.$mine-shaft;
+  width: 100%;
 }
 
 .logo-box {
@@ -14,6 +15,7 @@
 
 .header-bottom {
   background-color: colors.$victoria;
+  width: 100%;
 }
 
 .tb-item {
@@ -34,14 +36,16 @@
 .toolbar-top {
   background-color: colors.$mine-shaft;
   margin: 0 auto;
-  width: 60%;
+  width: 940px;
+  height: 53px;
   padding: 0;
 }
 
 .toolbar-bottom {
   background-color: colors.$victoria;
   margin: 0 auto;
-  width: 60%;
+  width: 940px;
+  height: 53px;
   padding: 0;
 }
 

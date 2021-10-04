@@ -73,7 +73,7 @@
 }
 
 .horizontal-image {
-  width: 175px;
+  max-width: 175px;
   height: 120px;
 }
 
@@ -84,7 +84,7 @@
 }
 
 .horizontal-card {
-  flex: 1 1 35%;
+  flex: 1 1 5%;
   text-decoration: none;
   color: black;
   display: flex;
