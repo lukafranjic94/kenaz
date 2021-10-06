@@ -49,6 +49,10 @@ export class CommentService {
     );
   }
 
+  public getSampleComments(): Array<Comment> {
+    return this.comments.slice(0, 3);
+  }
+
   public getCommentsForArticleId(articleId: string): Array<Comment> {
     return this.comments.filter(
       (comment: Comment) => comment.articleId === articleId

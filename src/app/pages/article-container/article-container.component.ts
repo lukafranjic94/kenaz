@@ -35,7 +35,9 @@ export class ArticleContainerComponent implements OnInit {
       const id: string | null = paramMap.get('id');
       if (id) {
         this.article = this.articleService.getArticle(id);
-        this.comments = this.commentService.getCommentsForArticleId(id);
+        this.comments = this.commentService
+          .getSampleComments()
+          .concat(this.commentService.getCommentsForArticleId(id));
       }
     });
   }
