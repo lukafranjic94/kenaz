@@ -87,30 +87,47 @@ span {
 
 .tb-news {
   border-bottom-color: colors.$astral;
+  &:hover {
+    background-color: colors.$astral;
+  }
 }
 
 .tb-business {
   border-bottom-color: colors.$burnt-sienna;
+  &:hover {
+    background-color: colors.$burnt-sienna;
+  }
 }
 
 .tb-sport {
   border-bottom-color: colors.$mantis;
+  &:hover {
+    background-color: colors.$mantis;
+  }
 }
 
 .tb-life {
   border-bottom-color: colors.$malibu;
+  &:hover {
+    background-color: colors.$malibu;
+  }
 }
 
 .tb-tech {
   border-bottom-color: colors.$saffron-mango;
+  &:hover {
+    background-color: colors.$saffron-mango;
+  }
 }
 
 .tb-travel {
   border-bottom-color: colors.$barley-corn;
+  &:hover {
+    background-color: colors.$barley-corn;
+  }
 }
 
 .tb-category:hover {
   border: none;
-  background-color: #299ec3;
   cursor: pointer;
 }
