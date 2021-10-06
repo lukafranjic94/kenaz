@@ -15,15 +15,18 @@
 }
 
 .header {
-  margin: 0px 30px 30px 30px;
+  margin: 0px 31px 30px 31px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
 .arrows {
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
   img {
-    margin: 0px 10px;
+    align-self: center;
     cursor: pointer;
     color: blue;
   }
@@ -32,7 +35,7 @@
 .carousel {
   margin: 0px 15px 0px 15px;
   img {
-    height: 230px;
+    height: 150px;
   }
 }
 
