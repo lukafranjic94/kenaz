@@ -12,15 +12,15 @@
     <div class="main-content">
         <ng-container *ngIf="article">
             <div class="body">
-                <p>{{ article.body }}</p>
+                <p class="article-text">{{ article.body }}</p>
                 <img class="inserted-image" src="assets/images/article_image.png" alt="">
-                <p>{{ article.body }}</p>
+                <p class="article-text">{{ article.body }}</p>
                 <img class="social-bar" src="assets/images/social_bar.png" alt="">
             </div>
             <div class="mid-banner"></div>
 
             <div class="author">
-                <h1 class="author-title">About the Author</h1>
+                <h1 class="section-title">About the Author</h1>
                 <div class="author-info">
                     <img src="assets/images/author_image.png" alt="">
                     <p class="author-about">Molestias ultricies, ante quam urna ut volutpat, egestas dolor dui, nec hac
@@ -37,7 +37,7 @@
 
             <ng-container *ngIf="comments">
                 <div class="comments">
-                    <h1>Comments</h1>
+                    <h1 class="section-title">Comments</h1>
                     <ng-container *ngFor="let comment of comments">
                         <div class="comment">
                             <img class="comment-image" src="assets/images/thumbnail_avatar.png" alt="">
@@ -52,7 +52,17 @@
                             </div>
                         </div>
                     </ng-container>
-                    <h1>Add your comment</h1>
+                    <h1 class="section-title">Add your comment</h1>
+                    <p class="comments-intro">Molestias ultricies, ante quam urna ut volutpat, egestas dolor dui, nec
+                        hac
+                        ultrices nulla non
+                        netus.
+                        Placerat vehicula donec non suscipit egestas, augue vel suspendisse. Et felis venenatis blandit
+                        sed est
+                        ultrices, adipiscing urna, at aliquam nullam facilisis aliquet sapien, eget duis consectetuer
+                        tristique
+                        nunc
+                        vitae erat, mi purus nisl lorem. </p>
                     <form class="form">
                         <input class="form-field name-field" type="text" name="name" id="name" placeholder="Name">
                         <input class="form-field email-field" type="email" name="email" id="email"
