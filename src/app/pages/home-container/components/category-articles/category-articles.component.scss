@@ -10,14 +10,14 @@
 }
 
 .title {
-  font-size: 24px;
+  font-size: typography.$font-size-xl;
   font-weight: bold;
   font-family: typography.$font-family-bitter;
-  color: #363f48;
+  color: colors.$sidebar-black;
 }
 
 .link {
-  font-size: 14px;
+  font-size: typography.$font-size-sm;
   font-family: typography.$font-family-varela-round;
   text-decoration: underline;
   text-decoration-style: dotted;
@@ -108,12 +108,13 @@
 
 .date {
   font-family: typography.$font-family-varela-round;
-  font-size: 14px;
+  font-size: typography.$font-size-xxs;
   color: #666666;
 }
 
 .article-title {
   font-family: typography.$font-family-bitter;
-  font-size: 18px;
+  font-size: typography.$font-size-sm;
   font-weight: bold;
+  color: colors.$sidebar-black;
 }

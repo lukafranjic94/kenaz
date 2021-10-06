@@ -7,7 +7,7 @@
 }
 
 .title {
-  font-size: 34px;
+  font-size: typography.$font-size-xxl;
 }
 
 .content {
@@ -40,8 +40,11 @@
   justify-content: flex-start;
   column-gap: 30px;
   color: colors.$article-slider-text;
-  font-size: 14px;
+  font-size: typography.$font-size-xxs;
   font-family: typography.$font-family-varela-round;
+  img {
+    align-self: center;
+  }
 }
 
 .comment-count {
@@ -71,5 +74,5 @@
   cursor: pointer;
   font-family: typography.$font-family-varela-round;
   color: colors.$article-slider-text;
-  font-size: 16px;
+  font-size: typography.$font-size-sm;
 }
