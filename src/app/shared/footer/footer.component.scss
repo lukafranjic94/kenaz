@@ -1,5 +1,6 @@
 @use 'utils/colors';
 @use 'utils/typography';
+@use 'utils/layout';
 
 :host {
   border-top: 20px solid colors.$victoria;
@@ -7,10 +8,15 @@
   display: block;
   color: colors.$white;
   padding: 50px 0px;
+  p {
+    margin: 0;
+    padding: 0;
+  }
 }
-p {
+
+.section-text {
   color: colors.$footer-dark;
-  font-size: 14px;
+  font-size: typography.$font-size-sm;
 }
 
 .kenaz-title {
@@ -29,49 +35,45 @@ p {
   height: 100%;
 }
 
-.newsletter {
-  h1 {
-    font-size: 24px;
-    margin-bottom: 25px;
-    color: colors.$footer-light;
-  }
-}
-
-.tags {
-  h1 {
-    font-size: 24px;
-    margin-bottom: 25px;
-    color: colors.$footer-light;
-  }
+.section-title {
+  font-size: typography.$font-size-xl;
+  padding-top: 3px;
+  margin-bottom: 35px;
+  color: colors.$footer-light;
 }
 
 .content {
-  width: 940px;
+  width: layout.$main-container-width;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  padding-bottom: 70px;
   column-gap: 15px;
   row-gap: 60px;
 }
 
 .newsletter-input {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
   input {
     border: none;
-    padding: 15px 0px 15px 15px;
     background-color: #333333;
     color: #999999;
-    font-size: 16px;
+    font-size: typography.$font-size-md;
+    padding-left: 20px;
     font-family: typography.$font-family-varela-round;
     outline: none;
   }
   .btn {
     background-color: colors.$victoria;
     border: none;
-    padding: 15px 10px;
     color: colors.$footer-light;
     cursor: pointer;
     font-family: typography.$font-family-varela-round;
-    font-size: 16px;
+    font-size: typography.$font-size-md;
+    width: 112px;
+    height: 53px;
   }
 }
 
@@ -79,14 +81,15 @@ p {
   display: flex;
   flex-direction: row;
   column-gap: 5px;
+  margin-top: 25px;
 }
 
 .copyright {
-  width: 940px;
+  width: layout.$main-container-width;
   margin: 15px auto 0px auto;
   display: flex;
   justify-content: space-between;
-  font-size: 12px;
+  font-size: typography.$font-size-xxs;
   color: colors.$footer-light;
   font-family: typography.$font-family-varela-round;
 }
@@ -108,7 +111,7 @@ p {
   color: colors.$footer-dark;
   cursor: pointer;
   font-family: typography.$font-family-varela;
-  font-size: 14px;
+  font-size: typography.$font-size-xxs;
 }
 
 .tag:hover {

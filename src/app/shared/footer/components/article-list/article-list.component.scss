@@ -7,6 +7,11 @@
   row-gap: 15px;
 }
 
+.title {
+  font-size: typography.$font-size-xl;
+  margin-bottom: 25px;
+}
+
 a {
   text-decoration: none;
   border-bottom: 1px solid colors.$footer-dark;
@@ -16,15 +21,10 @@ a:last-of-type {
   border: none;
 }
 
-h1 {
-  font-size: 24px;
-  margin-bottom: 25px;
-}
-
 .image {
   width: 70px;
   height: 70px;
-  border: 2px solid white;
+  border: 2px solid colors.$white;
 }
 
 .article {
@@ -42,13 +42,13 @@ h1 {
   justify-content: space-between;
   color: colors.$footer-dark;
   font-family: typography.$font-family-varela;
-  font-size: 14px;
+  font-size: typography.$font-size-xxxs;
   margin-bottom: 5px;
 }
 
 .article-title {
   color: colors.$footer-light;
-  font-size: 18px;
+  font-size: typography.$font-size-sm;
   font-weight: bold;
 }
 
