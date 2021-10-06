@@ -9,9 +9,13 @@
   padding: 5px 0px;
 }
 
+.title {
+  font-size: typography.$font-size-xl;
+}
+
 .video {
   width: 100%;
-  height: 250px;
+  height: 150px;
 }
 
 .header {
@@ -27,11 +31,11 @@
 
 .date {
   font-family: typography.$font-family-varela-round;
-  font-size: 14px;
+  font-size: typography.$font-size-xxs;
 }
 
 .article-title {
   font-family: typography.$font-family-bitter;
-  font-size: 18px;
+  font-size: typography.$font-size-sm;
   font-weight: bold;
 }

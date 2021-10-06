@@ -24,7 +24,7 @@
   background-color: colors.$victoria;
   width: 100%;
   font-family: typography.$font-family-varela-round;
-  font-size: 14px;
+  font-size: typography.$font-size-sm;
   color: colors.$white;
 }
 
@@ -32,7 +32,7 @@
   color: colors.$sidebar-black;
   font-family: typography.$font-family-bitter;
   font-weight: bold;
-  font-size: 18px;
+  font-size: typography.$font-size-lg;
   display: flex;
   align-items: center;
   background-color: colors.$sidebar-light;
