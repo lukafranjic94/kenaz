@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { SlickCarouselComponent } from 'ngx-slick-carousel';
+import { ModalImageComponent } from '../modal-image/modal-image.component';
 
 @Component({
   selector: 'app-image-slider',
@@ -9,7 +11,8 @@ import { SlickCarouselComponent } from 'ngx-slick-carousel';
 export class ImageSliderComponent implements OnInit {
   @ViewChild('mainCarousel') public mainCarousel: SlickCarouselComponent;
   @ViewChild('reelCarousel') public reelCarousel: SlickCarouselComponent;
-  constructor() {}
+  public currentSlide: number = 0;
+  constructor(private dialog: MatDialog) {}
 
   ngOnInit(): void {}
   slides = [
@@ -46,5 +49,15 @@ export class ImageSliderComponent implements OnInit {
   public prev(): void {
     this.mainCarousel.slickPrev();
     this.reelCarousel.slickPrev();
+  }
+
+  afterChange(e: any): void {
+    console.log(e);
+    this.currentSlide = e.currentSlide;
+  }
+
+  public popUp(): void {
+    let smt = this.dialog.open(ModalImageComponent);
+    smt.componentInstance.imgUrl = this.slides[this.currentSlide].img;
   }
 }

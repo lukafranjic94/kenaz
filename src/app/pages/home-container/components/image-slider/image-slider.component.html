@@ -1,12 +1,13 @@
-<ngx-slick-carousel class="carousel first-carousel" #mainCarousel="slick-carousel" [config]="slideConfig">
+<ngx-slick-carousel class="carousel first-carousel" #mainCarousel="slick-carousel" [config]="slideConfig"
+    (afterChange)="afterChange($event)">
     <div ngxSlickItem *ngFor="let slide of slides" class="slide">
-        <img class="image" [src]="slide.img" alt="" width="100%">
+        <img #mainImg class="image" [src]="slide.img" alt="" width="100%">
     </div>
 </ngx-slick-carousel>
 <div class="overlay">
     <div class="navigation">
         <img class="prev" (click)="prev()" src="assets/images/arrow_left.png" />
-        <img src="assets/images/search.svg" alt="">
+        <img (click)="popUp()" src="assets/images/search.svg" alt="">
         <img class="next" (click)="next()" src="assets/images/arrow_right.png" />
     </div>
     <ngx-slick-carousel class="carousel second-carousel" #reelCarousel="slick-carousel" [config]="navConfig">

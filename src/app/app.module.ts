@@ -26,6 +26,8 @@ import { ArticleSliderComponent } from './components/article-slider/article-slid
 import { ImageSliderComponent } from './pages/home-container/components/image-slider/image-slider.component';
 import { TweetsComponent } from './shared/footer/components/tweets/tweets.component';
 import { ArticleCarouselComponent } from './pages/home-container/components/article-carousel/article-carousel.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ModalImageComponent } from './pages/home-container/components/modal-image/modal-image.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +49,7 @@ import { ArticleCarouselComponent } from './pages/home-container/components/arti
     ImageSliderComponent,
     TweetsComponent,
     ArticleCarouselComponent,
+    ModalImageComponent,
   ],
   imports: [
     BrowserModule,
@@ -57,6 +60,7 @@ import { ArticleCarouselComponent } from './pages/home-container/components/arti
     MatTabsModule,
     MatIconModule,
     SlickCarouselModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
