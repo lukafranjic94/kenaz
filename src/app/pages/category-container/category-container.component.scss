@@ -48,24 +48,17 @@
 
 .image {
   width: 170px;
-  height: 125px;
+  height: 128px;
 }
 
 .misc {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  width: 55%;
   align-items: center;
+  column-gap: 50px;
   font-family: typography.$font-family-varela-round;
-  font-size: 12px;
+  font-size: typography.$font-size-xxs;
   color: #666666;
-}
-
-.date {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
 }
 
 .article {
@@ -82,9 +75,16 @@
   width: 125px;
   height: 35px;
   font-family: typography.$font-family-varela-round;
-  font-size: 14px;
+  font-size: typography.$font-size-sm;
   color: colors.$white;
   cursor: pointer;
+}
+
+.date-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 5px;
 }
 
 .pagination {
@@ -99,9 +99,9 @@
     justify-content: center;
     align-items: center;
     background-color: #dddddd;
-    color: #4d4382;
+    color: colors.$victoria;
     font-family: typography.$font-family-varela-round;
-    font-size: 14px;
+    font-size: typography.$font-size-sm;
     cursor: pointer;
   }
   span:hover {
@@ -110,17 +110,11 @@
   }
 }
 
-h1 {
-  font-size: 24px;
-  font-weight: bold;
-  font-family: typography.$font-family-bitter;
-  color: #363f48;
-}
-
 .article-body {
   font-family: typography.$font-family-bitter;
-  font-size: 14px;
+  font-size: typography.$font-size-sm;
   line-height: 22px;
+  color: colors.$article-text;
 }
 
 .banner {
@@ -130,6 +124,15 @@ h1 {
   border: 1px solid colors.$black;
 }
 
+.article-title {
+  font-size: typography.$font-size-xl;
+  font-weight: bold;
+  color: colors.$sidebar-black;
+}
+
 .title {
   text-transform: capitalize;
+  font-size: typography.$font-size-xl;
+  font-weight: bold;
+  color: colors.$sidebar-black;
 }

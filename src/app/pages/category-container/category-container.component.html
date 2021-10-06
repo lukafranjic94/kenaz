@@ -6,11 +6,13 @@
             <h1 class="title">{{ categoryName }}</h1>
             <ng-container *ngFor="let data of templateData">
                 <div class="article">
-                    <h1>{{ data.article.title }}</h1>
+                    <h1 class="article-title">{{ data.article.title }}</h1>
                     <div class="misc">
-                        <div class="date">
-                            <mat-icon>event</mat-icon>
-                            {{ data.article.createdAt.toLocaleDateString('en-US', dateOptions) }}
+                        <div class="date-container">
+                            <img src="assets/images/calendar.png" alt="">
+                            <span class="date">
+                                {{ data.article.createdAt.toLocaleDateString('en-US', dateOptions) }}
+                            </span>
                         </div>
                         <span>Author: {{ data.author.fullName }}</span>
                         <span>12 Comments</span>
