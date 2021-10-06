@@ -32,7 +32,7 @@ export class ImageSliderComponent implements OnInit {
     draggable: false,
   };
   public navConfig = {
-    slidesToShow: 6,
+    slidesToShow: 7,
     slidesToScroll: 1,
     arrows: false,
     asNavFor: '.first-carousel',
