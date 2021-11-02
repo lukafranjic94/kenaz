@@ -1,33 +1,36 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { IRawCategory } from 'src/app/interfaces/category.interface';
+import { Observable } from 'rxjs';
+import { map, mapTo } from 'rxjs/operators';
+import { IRawCategory } from 'src/app/interfaces/raw-category';
+import { ApiPaths, environment } from 'src/environments/environment';
 import { Category } from './category.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CategoryService {
-  private categories: Array<IRawCategory> = [
-    {
-      id: '1',
-      name: 'Business',
-    },
-    {
-      id: '2',
-      name: 'Sport',
-    },
-    {
-      id: '3',
-      name: 'News',
-    },
-  ];
+  constructor(private http: HttpClient) {}
 
-  constructor() {}
-
-  public getCategories(): Array<Category> {
-    return this.categories.map((rawCategory) => new Category(rawCategory));
+  public getCategory(categoryId: string): Observable<Category> {
+    return this.http
+      .get<{ category: IRawCategory }>(
+        `${environment.apiUrl}${ApiPaths.Categories}/${categoryId}`
+      )
+      .pipe(map((repsonse) => new Category(repsonse.category)));
   }
 
-  public getCategory(categoryId: string): Category | undefined {
-    return this.getCategories().find((category) => category.id === categoryId);
+  public getCategories(): Observable<Array<Category>> {
+    return this.http
+      .get<{ categories: Array<IRawCategory> }>(
+        `${environment.apiUrl}${ApiPaths.Categories}`
+      )
+      .pipe(
+        map((response) =>
+          response.categories.map(
+            (rawCategory: IRawCategory) => new Category(rawCategory)
+          )
+        )
+      );
   }
 }

@@ -1,57 +1,49 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, ParamMap } from '@angular/router';
+import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { combineLatest, Observable, of } from 'rxjs';
+import { map, mergeAll, switchMap, toArray } from 'rxjs/operators';
 import { Article } from 'src/app/services/article/article.model';
 import { ArticleService } from 'src/app/services/article/article.service';
-import { Author } from 'src/app/services/author/author.model';
-import { AuthorService } from 'src/app/services/author/author.service';
-
-interface ITemplateData {
-  article: Article;
-  author: Author;
-}
+import { User } from 'src/app/services/user/user.model';
+import { UserService } from 'src/app/services/user/user.service';
 
 @Component({
   selector: 'app-category-container',
   templateUrl: './category-container.component.html',
   styleUrls: ['./category-container.component.scss'],
 })
-export class CategoryContainerComponent implements OnInit {
-  public templateData: Array<ITemplateData>;
-  public articles: Array<Article>;
-  public categoryName: string;
+export class CategoryContainerComponent {
+  public categoryName: string = 'mujo';
   public dateOptions: Intl.DateTimeFormatOptions = {
     month: 'long',
     day: 'numeric',
     year: 'numeric',
   };
+  public templateData$: Observable<Array<{ article: Article; user: User }>> =
+    this.route.paramMap.pipe(
+      switchMap((val) => {
+        const categoryName: string | null = val.get('name');
+        if (!categoryName) {
+          throw new Error('Something went wrong!');
+        }
+        this.categoryName = categoryName;
+        if (categoryName.toLowerCase() === 'news') {
+          return this.articleService.getLatestArticlesWithUser();
+        }
+        return this.articleService.getArticlesWithUserForCategoryName(
+          categoryName
+        );
+      })
+    );
+
   constructor(
     private route: ActivatedRoute,
-    private articleService: ArticleService,
-    private authorService: AuthorService
+    private articleService: ArticleService
   ) {}
 
-  ngOnInit(): void {
-    this.route.paramMap.subscribe((params: ParamMap) => {
-      const categoryName: string | null = params.get('name');
-      if (!categoryName) {
-        throw new Error('category not found');
-      }
-      this.categoryName = categoryName;
-      this.templateData = this.articleService
-        .getArticlesForCategoryName(categoryName)
-        .map((article: Article) => {
-          let author = this.authorService.getAuthor(article.authorId);
-          if (!author) {
-            throw new Error('no author');
-          }
-          return {
-            article,
-            author,
-          };
-        });
-      this.articles = this.templateData.map(
-        (templateData: ITemplateData) => templateData.article
-      );
-    });
+  public getArticlesFromTemplateData(
+    templateData: Array<{ article: Article; user: User }>
+  ): Array<Article> {
+    return templateData.map((data) => data.article);
   }
 }

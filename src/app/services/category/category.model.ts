@@ -1,4 +1,4 @@
-import { IRawCategory } from 'src/app/interfaces/category.interface';
+import { IRawCategory } from 'src/app/interfaces/raw-category';
 
 export class Category {
   public id: string;

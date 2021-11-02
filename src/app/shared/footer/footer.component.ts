@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { Article } from 'src/app/services/article/article.model';
 import { ArticleService } from 'src/app/services/article/article.service';
 
@@ -7,13 +9,14 @@ import { ArticleService } from 'src/app/services/article/article.service';
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss'],
 })
-export class FooterComponent implements OnInit {
-  public featuredArticles: Array<Article>;
-  public randomArticles: Array<Article>;
-  constructor(private articleService: ArticleService) {
-    this.featuredArticles = this.articleService.getNPopularArticles(3);
-    this.randomArticles = this.articleService.getNPopularArticles(3);
-  }
+export class FooterComponent {
+  public featuredArticles$: Observable<Array<Article>> = this.articleService
+    .getMostViewedArticles()
+    .pipe(map((articles: Array<Article>) => articles.slice(0, 3)));
 
-  ngOnInit(): void {}
+  public randomArticles$: Observable<Array<Article>> = this.articleService
+    .getTopRatedArticles()
+    .pipe(map((articles) => articles.slice(0, 3)));
+
+  constructor(private articleService: ArticleService) {}
 }

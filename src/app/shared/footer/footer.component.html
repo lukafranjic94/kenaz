@@ -44,8 +44,12 @@
             <span class="tag">assuev</span>
         </div>
     </div>
-    <app-article-list title="Featured" [articles]="featuredArticles"></app-article-list>
-    <app-article-list title="Random Posts" [articles]="randomArticles"></app-article-list>
+    <ng-container *ngIf="featuredArticles$ | async as featuredArticles">
+        <app-article-list title="Featured" [articles]="featuredArticles"></app-article-list>
+    </ng-container>
+    <ng-container *ngIf="randomArticles$ | async as randomArticles">
+        <app-article-list title="Random Posts" [articles]="randomArticles"></app-article-list>
+    </ng-container>
     <app-tweets></app-tweets>
 </div>
 <div class="copyright-wrapper">

@@ -1,47 +1,50 @@
-<app-article-slider [articles]="articles"></app-article-slider>
+<ng-container *ngIf="templateData$ | async as templateData">
+    <app-article-slider [articles]="getArticlesFromTemplateData(templateData)"></app-article-slider>
 
-<div class="main">
-    <div class="main-content">
-        <div class="article-list">
-            <h1 class="title">{{ categoryName }}</h1>
-            <ng-container *ngFor="let data of templateData">
-                <div class="article">
-                    <h1 class="article-title">{{ data.article.title }}</h1>
-                    <div class="misc">
-                        <div class="date-container">
-                            <img src="assets/images/calendar.png" alt="">
-                            <span class="date">
-                                {{ data.article.createdAt.toLocaleDateString('en-US', dateOptions) }}
-                            </span>
+    <div class="main">
+        <div class="main-content">
+            <div class="article-list">
+                <h1 class="title">{{ categoryName }}</h1>
+                <ng-container *ngFor="let data of templateData">
+                    <div class="article">
+                        <h1 class="article-title">{{ data.article.title }}</h1>
+                        <div class="misc">
+                            <div class="date-container">
+                                <img src="assets/images/calendar.png" alt="">
+                                <span class="date">
+                                    {{ data.article.createdAt.toLocaleDateString('en-US', dateOptions) }}
+                                </span>
+                            </div>
+                            <span>Author: {{ data.user.fullName }}</span>
+                            <span>12 Comments</span>
                         </div>
-                        <span>Author: {{ data.author.fullName }}</span>
-                        <span>12 Comments</span>
-                    </div>
-                    <div class="article-content">
-                        <img class="image" [src]="data.article.imgUrl" alt="">
-                        <div class="text">
-                            <p class="article-body">{{ data.article.body.slice(0, 400) }}...</p>
-                            <button [routerLink]="['/articles', data.article.id]" class="btn">Read article</button>
+                        <div class="article-content">
+                            <img class="image" [src]="data.article.imgUrl" alt="">
+                            <div class="text">
+                                <p class="article-body">{{ data.article.body.slice(0, 400) }}...</p>
+                                <button [routerLink]="['/articles', data.article.url]" class="btn">Read article</button>
+                            </div>
                         </div>
                     </div>
+                </ng-container>
+                <div class="pagination">
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                    <span>6</span>
+                    <span>7</span>
+                    <span>8</span>
+                    <span>9</span>
+                    <span>10</span>
                 </div>
-            </ng-container>
-            <div class="pagination">
-                <span>1</span>
-                <span>2</span>
-                <span>3</span>
-                <span>4</span>
-                <span>5</span>
-                <span>6</span>
-                <span>7</span>
-                <span>8</span>
-                <span>9</span>
-                <span>10</span>
             </div>
+            <div class="banner"></div>
         </div>
-        <div class="banner"></div>
+        <div class="sidebar">
+            <app-sidebar></app-sidebar>
+        </div>
     </div>
-    <div class="sidebar">
-        <app-sidebar></app-sidebar>
-    </div>
-</div>
+
+</ng-container>

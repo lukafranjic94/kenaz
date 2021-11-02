@@ -12,7 +12,7 @@ const routes: Routes = [
     children: [
       { path: '', component: HomeContainerComponent },
       { path: 'categories/:name', component: CategoryContainerComponent },
-      { path: 'articles/:id', component: ArticleContainerComponent },
+      { path: 'articles/:article_url', component: ArticleContainerComponent },
     ],
   },
   {

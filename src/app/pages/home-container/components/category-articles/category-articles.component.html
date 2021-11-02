@@ -20,7 +20,7 @@
 </ng-template>
 
 <ng-template #vertical let-article='article'>
-    <a class="article" [routerLink]="['/articles', article.id]">
+    <a class="article" [routerLink]="['/articles', article.url]">
         <mat-card class="article">
             <img [ngClass]="header === 'link' ? 'small-image' : 'big-image'" [src]="article.imgUrl"
                 alt="Photo of a Shiba Inu">
@@ -33,7 +33,7 @@
 </ng-template>
 
 <ng-template #horizontal let-article='article'>
-    <a class="horizontal-card" [routerLink]="['/articles', article.id]">
+    <a class="horizontal-card" [routerLink]="['/articles', article.url]">
         <div class="horizontal-card">
             <img class="horizontal-image" [src]="article.imgUrl" alt="Photo of a Shiba Inu">
             <div class="horizontal-card-content">

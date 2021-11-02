@@ -28,6 +28,7 @@ import { TweetsComponent } from './shared/footer/components/tweets/tweets.compon
 import { ArticleCarouselComponent } from './pages/home-container/components/article-carousel/article-carousel.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ModalImageComponent } from './pages/home-container/components/modal-image/modal-image.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { ModalImageComponent } from './pages/home-container/components/modal-ima
     MatIconModule,
     SlickCarouselModule,
     MatDialogModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

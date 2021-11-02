@@ -1,4 +1,7 @@
-<app-sidebar-articles [popularArticles]="popularArticles" [topRatedArticles]="topRatedArticles"></app-sidebar-articles>
+<ng-container *ngIf="templateData$ | async as templateData">
+    <app-sidebar-articles [popularArticles]="templateData.popularArticles"
+        [topRatedArticles]="templateData.topRatedArticles"></app-sidebar-articles>
+</ng-container>
 <app-sidebar-social></app-sidebar-social>
 <app-sidebar-video></app-sidebar-video>
 <div class="banner-group">
