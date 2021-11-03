@@ -35,7 +35,7 @@ export class ArticleService {
       )
       .pipe(
         map((response) => new Article(response.article)),
-        switchMap((article) =>
+        switchMap((article: Article) =>
           combineLatest([
             this.userService.getUser(article.userId),
             this.commentService.getCommentsForArticleId(article.id),
