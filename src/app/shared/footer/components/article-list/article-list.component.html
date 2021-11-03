@@ -1,6 +1,6 @@
 <h1 class="title">{{ title }}</h1>
 <ng-container *ngFor="let article of articles">
-    <a [routerLink]="['articles', article.id]">
+    <a [routerLink]="['articles', article.url]">
         <div class="article">
             <div class="content">
                 <div class="date">

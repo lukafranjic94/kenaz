@@ -12,7 +12,7 @@
 
 <ng-template #popular>
     <ng-container *ngFor="let article of popularArticles">
-        <a class="article-link" [routerLink]="['/articles', article.id]">
+        <a class="article-link" [routerLink]="['/articles', article.url]">
             <div class="article">
                 <div class="content">
                     <div class="comment-info">
@@ -30,7 +30,7 @@
 
 <ng-template #topRated>
     <ng-container *ngFor="let article of topRatedArticles">
-        <a class="article-link" [routerLink]="['/articles', article.id]">
+        <a class="article-link" [routerLink]="['/articles', article.url]">
             <div class="article">
                 <div class="content">
                     <div class="comment-info">
