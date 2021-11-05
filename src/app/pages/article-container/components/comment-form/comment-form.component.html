@@ -1,0 +1,9 @@
+<form class="form" [formGroup]="commentFormGroup" #formDirective="ngForm" (ngSubmit)="onAddComment(formDirective)">
+    <input formControlName="name" class="form-field name-field" type="text" name="name" id="name" placeholder="Name">
+    <input formControlName="email" class="form-field email-field" type="email" name="email" id="email"
+        placeholder="Email Address">
+    <textarea formControlName="body" class="form-field body-field" name="body" id="body"
+        placeholder="Comment"></textarea>
+    <button [ngClass]="commentFormGroup.invalid ? 'btn-disabled' : 'btn'" type="submit"
+        [disabled]="commentFormGroup.invalid">Submit</button>
+</form>

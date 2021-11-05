@@ -67,13 +67,8 @@
                     tristique
                     nunc
                     vitae erat, mi purus nisl lorem. </p>
-                <form class="form">
-                    <input class="form-field name-field" type="text" name="name" id="name" placeholder="Name">
-                    <input class="form-field email-field" type="email" name="email" id="email"
-                        placeholder="Email Address">
-                    <textarea class="form-field body-field" name="body" id="body" placeholder="Comment"></textarea>
-                    <button class="btn">Submit</button>
-                </form>
+                <app-comment-form [articleId]="templateData.article.id" (addComment)="onAddComment($event)">
+                </app-comment-form>
             </div>
         </div>
         <div class="sidebar">

@@ -29,6 +29,8 @@ import { ArticleCarouselComponent } from './pages/home-container/components/arti
 import { MatDialogModule } from '@angular/material/dialog';
 import { ModalImageComponent } from './pages/home-container/components/modal-image/modal-image.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CommentFormComponent } from './pages/article-container/components/comment-form/comment-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -51,6 +53,7 @@ import { HttpClientModule } from '@angular/common/http';
     TweetsComponent,
     ArticleCarouselComponent,
     ModalImageComponent,
+    CommentFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -63,6 +66,7 @@ import { HttpClientModule } from '@angular/common/http';
     SlickCarouselModule,
     MatDialogModule,
     HttpClientModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

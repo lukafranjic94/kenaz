@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { IRawComment } from 'src/app/interfaces/raw-comment';
+import { ICommentData } from 'src/app/pages/article-container/article-container.component';
 import { ApiPaths, environment } from 'src/environments/environment';
 import { Comment } from './comment.model';
 
@@ -26,5 +27,21 @@ export class CommentService {
           )
         )
       );
+  }
+
+  public addComment(commentData: ICommentData): Observable<Comment> {
+    return this.http
+      .post<{ comment: IRawComment }>(
+        `${environment.apiUrl}${ApiPaths.Comments}`,
+        {
+          comment: {
+            name: commentData.commentFormData.name,
+            email: commentData.commentFormData.email,
+            body: commentData.commentFormData.body,
+            article_id: commentData.articleId,
+          },
+        }
+      )
+      .pipe(map((response) => new Comment(response.comment)));
   }
 }
