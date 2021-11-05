@@ -1,0 +1,49 @@
+@use "utils/colors";
+@use "utils/typography";
+
+.email-field,
+.name-field {
+  width: 50%;
+  height: 40px;
+}
+
+.body-field {
+  width: 100%;
+  height: 180px;
+  padding-top: 10px;
+}
+
+.form-field {
+  padding-left: 18px;
+  background-color: colors.$sidebar-light;
+  border: none;
+  font-family: typography.$font-family-varela;
+  font-size: typography.$font-size-sm;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+
+.btn {
+  cursor: pointer;
+  width: 150px;
+  height: 50px;
+  border: none;
+  color: white;
+  background-color: #4d4382;
+  font-family: typography.$font-family-varela-round;
+  font-size: typography.$font-size-sm;
+}
+
+.btn-disabled {
+  width: 150px;
+  height: 50px;
+  border: none;
+  color: white;
+  background-color: red;
+  font-family: typography.$font-family-varela-round;
+  font-size: typography.$font-size-sm;
+}

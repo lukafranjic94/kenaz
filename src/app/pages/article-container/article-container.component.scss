@@ -1,6 +1,6 @@
-@use 'utils/colors';
-@use 'utils/typography';
-@use 'utils/layout';
+@use "utils/colors";
+@use "utils/typography";
+@use "utils/layout";
 
 :host {
   p {
@@ -106,42 +106,6 @@
   font-family: typography.$font-family-varela;
   font-size: typography.$font-size-xxs;
   color: colors.$footer-dark;
-}
-
-.email-field,
-.name-field {
-  width: 50%;
-  height: 40px;
-}
-
-.body-field {
-  width: 100%;
-  height: 180px;
-  padding-top: 10px;
-}
-
-.form-field {
-  padding-left: 18px;
-  background-color: colors.$sidebar-light;
-  border: none;
-  font-family: typography.$font-family-varela;
-  font-size: typography.$font-size-sm;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  row-gap: 8px;
-}
-
-.btn {
-  width: 150px;
-  height: 50px;
-  border: none;
-  color: white;
-  background-color: #4d4382;
-  font-family: typography.$font-family-varela-round;
-  font-size: typography.$font-size-sm;
 }
 
 .comment-info {
